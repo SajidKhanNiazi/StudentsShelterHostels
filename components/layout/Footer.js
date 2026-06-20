@@ -66,7 +66,6 @@ export default function Footer() {
             <ul className="space-y-4">
               {[
                 { href: '/rooms', label: 'Rooms & Pricing' },
-                { href: '/apply', label: 'Apply Now' },
                 { href: '/about', label: 'About Us' },
                 { href: '/contact', label: 'Contact & Inquiry' },
               ].map((link) => (

@@ -3,6 +3,7 @@ import { Inter, Playfair_Display } from 'next/font/google';
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import WhatsAppFAB from "@/components/layout/WhatsAppFAB";
+import ChatBot from "@/components/chatbot/ChatBot";
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -65,7 +66,8 @@ export default function RootLayout({ children }) {
         <Navbar />
         <main className="flex-1">{children}</main>
         <Footer />
-        <WhatsAppFAB />
+        {/* <WhatsAppFAB /> */}
+        <ChatBot />
       </body>
     </html>
   );

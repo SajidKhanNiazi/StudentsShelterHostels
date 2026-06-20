@@ -37,13 +37,7 @@ export default function BranchContact({ hostel }) {
           WhatsApp
         </a>
 
-        <Link
-          href="/apply"
-          className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white rounded-xl text-sm font-semibold transition-all min-h-[48px]"
-        >
-          <FileText className="w-4 h-4" />
-          Apply
-        </Link>
+
       </div>
     </div>
   );

@@ -70,16 +70,6 @@ export default function Navbar() {
             ))}
           </div>
 
-          {/* Desktop CTA */}
-          <div className="hidden md:flex items-center">
-            <Link
-              href="/apply"
-              className="inline-flex items-center justify-center px-6 py-2.5 bg-[var(--color-accent)] hover:bg-[#a38a65] text-white text-xs font-semibold uppercase tracking-widest rounded transition-colors"
-            >
-              Apply Now
-            </Link>
-          </div>
-
           {/* Mobile Hamburger */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -119,15 +109,6 @@ export default function Navbar() {
                 </Link>
               );
             })}
-            <div className="pt-6 mt-4 border-t border-[var(--color-border)]">
-              <Link
-                href="/apply"
-                onClick={() => setIsOpen(false)}
-                className="flex items-center justify-center w-full px-4 py-4 bg-[var(--color-accent)] text-white text-sm font-bold uppercase tracking-wider rounded min-h-[48px]"
-              >
-                Apply Now
-              </Link>
-            </div>
           </div>
         </div>
       </div>

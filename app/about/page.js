@@ -145,13 +145,7 @@ export default function AboutPage() {
             Apply today and become part of our growing student community.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-            <Link
-              href="/apply"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white text-xs font-bold rounded-xl shadow transition-all min-h-[48px] active:scale-[0.98]"
-            >
-              Apply Now
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+
             <Link
               href="/boys-hostels"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 border border-[var(--color-border)] text-[var(--color-text-primary)] text-xs font-bold rounded-xl hover:bg-gray-50 transition-all min-h-[48px]"

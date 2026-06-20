@@ -6,7 +6,6 @@ import Link from 'next/link';
 export default function StickyMobileBar({ hostel }) {
   const cleanPhone = (hostel.phone || "0331-4343676").replace(/[^0-9]/g, '');
   const isBoys = hostel.type === 'boys';
-  const applyUrl = `/apply?branch=${encodeURIComponent(hostel.branchLabel || hostel.area)}&gender=${hostel.type}`;
 
   const message = `Hi, I'm interested in ${hostel.name} (${hostel.branchLabel || hostel.area}). Please share availability.`;
   const whatsappUrl = hostel.whatsapp
@@ -37,16 +36,6 @@ export default function StickyMobileBar({ hostel }) {
         <span className="text-[10px]">WhatsApp</span>
       </a>
 
-      {/* Apply Button - 50% width */}
-      <Link
-        href={applyUrl}
-        className={`w-1/2 flex items-center justify-center gap-1.5 px-4 py-2.5 text-white text-xs font-extrabold rounded-xl shadow min-h-[48px] active:scale-[0.98] ${
-          isBoys ? 'bg-[var(--color-boys-primary)]' : 'bg-[var(--color-girls-primary)]'
-        }`}
-      >
-        <FileText className="w-4 h-4 shrink-0" />
-        Apply Now
-      </Link>
     </div>
   );
 }

@@ -148,12 +148,12 @@ export default function RoomsPage() {
         {/* CTA */}
         <div className="text-center mt-12 bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-8 md:p-12 text-white shadow-lg">
           <h3 className="text-2xl font-bold mb-3">Ready to Move In?</h3>
-          <p className="text-slate-300 text-sm md:text-base max-w-xl mx-auto mb-6">Apply now and secure your room at Students Shelter Hostels.</p>
+          <p className="text-slate-300 text-sm md:text-base max-w-xl mx-auto mb-6">Contact us to secure your room at Students Shelter Hostels.</p>
           <Link
-            href="/apply"
+            href="/contact"
             className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white text-base font-bold rounded-2xl shadow-xl transition-all min-h-[56px] active:scale-[0.98]"
           >
-            Apply for a Room
+            Contact Us
             <ArrowRight className="w-5 h-5" />
           </Link>
         </div>

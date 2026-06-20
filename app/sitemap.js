@@ -17,6 +17,5 @@ export default function sitemap() {
     { url: 'https://studentsshelter.com/rooms/', changeFrequency: 'monthly', priority: 0.7 },
     { url: 'https://studentsshelter.com/about/', changeFrequency: 'monthly', priority: 0.6 },
     { url: 'https://studentsshelter.com/contact/', changeFrequency: 'monthly', priority: 0.7 },
-    { url: 'https://studentsshelter.com/apply/', changeFrequency: 'monthly', priority: 0.8 },
   ];
 }

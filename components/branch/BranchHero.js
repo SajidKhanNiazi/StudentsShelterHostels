@@ -51,17 +51,7 @@ export default function BranchHero({ hostel }) {
         >
           WhatsApp Us
         </WhatsAppButton>
-        <Link
-          href={`/apply?branch=${encodeURIComponent(hostel.branchLabel || hostel.area)}&gender=${hostel.type}`}
-          className={`flex-1 sm:flex-none inline-flex items-center justify-center gap-2 px-6 py-3 text-white rounded-xl font-bold transition-all shadow-md min-h-[48px] ${
-            isBoys
-              ? 'bg-[var(--color-boys-primary)] hover:bg-[var(--color-boys-accent)]'
-              : 'bg-[var(--color-girls-primary)] hover:bg-[var(--color-girls-accent)]'
-          }`}
-        >
-          <FileText className="w-4 h-4 shrink-0" />
-          Apply Now
-        </Link>
+
       </div>
     </div>
   );
