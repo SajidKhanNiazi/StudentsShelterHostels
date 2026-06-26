@@ -27,7 +27,7 @@ export default function BoysHostelsClient() {
         {/* Title Section */}
         <div className="bg-gradient-to-br from-[var(--color-boys-primary)] to-[var(--color-boys-accent)] rounded-3xl p-8 md:p-12 text-white shadow-lg mb-8">
           <div className="max-w-3xl">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4 text-white leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4 !text-white leading-tight">
               Boys Hostels in Islamabad
             </h1>
             <p className="text-blue-100 text-base md:text-lg leading-relaxed">

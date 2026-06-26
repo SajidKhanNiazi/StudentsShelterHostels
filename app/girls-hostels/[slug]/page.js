@@ -7,11 +7,14 @@ import BranchAmenities from '@/components/branch/BranchAmenities';
 import BranchDirections from '@/components/branch/BranchDirections';
 import BranchEnquiryForm from '@/components/branch/BranchEnquiryForm';
 import BranchOtherLocations from '@/components/branch/BranchOtherLocations';
+import BranchFAQ from '@/components/branch/BranchFAQ';
 import StickyMobileBar from '@/components/branch/StickyMobileBar';
 import GirlsSecurityBanner from '@/components/branch/GirlsSecurityBanner';
 import Link from 'next/link';
 import { ArrowRight, User, Users, Users2, ShieldCheck, Check, Heart, Phone } from 'lucide-react';
 import { notFound } from 'next/navigation';
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://studentsshelterhostels.vercel.app';
 
 export async function generateStaticParams() {
   return GIRLS_HOSTELS.map((hostel) => ({
@@ -27,8 +30,22 @@ export async function generateMetadata({ params }) {
   return {
     title: hostel.seo.title,
     description: hostel.seo.description,
+    keywords: hostel.seo.keywords,
     alternates: {
-      canonical: `https://studentsshelter.com/girls-hostels/${hostel.slug}/`,
+      canonical: `${SITE_URL}/girls-hostels/${hostel.slug}`,
+    },
+    openGraph: {
+      title: hostel.seo.ogTitle || hostel.seo.title,
+      description: hostel.seo.ogDescription || hostel.seo.description,
+      url: `${SITE_URL}/girls-hostels/${hostel.slug}`,
+      type: 'website',
+      locale: 'en_PK',
+      siteName: 'Students Shelter Hostels',
+    },
+    twitter: {
+      card: 'summary',
+      title: hostel.seo.title,
+      description: hostel.seo.description,
     },
   };
 }
@@ -157,6 +174,9 @@ export default async function GirlsBranchPage({ params }) {
 
         {/* Enquiry form */}
         <BranchEnquiryForm branchName={hostel.branchLabel || hostel.area} hostelType="girls" />
+
+        {/* FAQ Section */}
+        <BranchFAQ faqs={hostel.faqs} type="girls" />
 
         {/* Other sibling branches */}
         <BranchOtherLocations currentHostel={hostel} allHostels={GIRLS_HOSTELS} />

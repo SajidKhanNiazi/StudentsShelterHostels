@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X, Home, MapPin, BedDouble, Info, Mail, FileText, Camera } from 'lucide-react';
 
 const navLinks = [
@@ -44,11 +45,16 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group" onClick={() => setIsOpen(false)}>
-            <div className="w-10 h-10 bg-[var(--color-primary)] rounded flex items-center justify-center transition-all group-hover:bg-[var(--color-text-primary)]">
-              <Home className="w-5 h-5 text-[var(--color-accent)]" />
+            <div className="relative w-12 h-12 flex-shrink-0 transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(20,184,166,0.6)]">
+              <Image 
+                src="/logo.jpg" 
+                alt="Students Shelter Logo" 
+                fill
+                className="object-contain"
+              />
             </div>
             <div className="flex flex-col">
-              <span className="text-lg font-semibold tracking-wide text-[var(--color-text-primary)] font-display uppercase">
+              <span className="text-lg font-semibold tracking-wide text-[var(--color-text-primary)] font-display uppercase group-hover:text-[var(--color-accent)] transition-colors duration-300">
                 Students Shelter
               </span>
               <span className="text-[10px] text-[var(--color-text-muted)] tracking-[0.2em] uppercase leading-none mt-1 hidden sm:block font-medium">

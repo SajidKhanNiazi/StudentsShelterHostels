@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Home, MapPin, Phone } from 'lucide-react';
 import { ALL_HOSTELS } from '@/lib/hostels';
 
@@ -11,12 +12,17 @@ export default function Footer() {
           
           {/* Brand Column */}
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-[var(--color-accent)] rounded flex items-center justify-center">
-                <Home className="w-5 h-5 text-white" />
+            <Link href="/" className="flex items-center gap-3 mb-6 group">
+              <div className="relative w-12 h-12 flex-shrink-0 transition-transform duration-300 group-hover:scale-110">
+                <Image 
+                  src="/logo.jpg" 
+                  alt="Students Shelter Logo" 
+                  fill
+                  className="object-contain drop-shadow-[0_0_8px_rgba(20,184,166,0.3)] group-hover:drop-shadow-[0_0_12px_rgba(20,184,166,0.8)] transition-all duration-300"
+                />
               </div>
               <div>
-                <span className="text-xl font-display uppercase tracking-widest text-white">Students Shelter</span>
+                <span className="text-xl font-display uppercase tracking-widest text-white group-hover:text-[var(--color-accent)] transition-colors duration-300">Students Shelter</span>
                 <p className="text-[10px] text-[#a8a29e] tracking-[0.2em] font-medium uppercase mt-1">
                   Hostels Islamabad
                 </p>

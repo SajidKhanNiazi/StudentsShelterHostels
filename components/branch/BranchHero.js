@@ -24,13 +24,20 @@ export default function BranchHero({ hostel }) {
         <AreaStamp area={hostel.area} type={hostel.type} className="opacity-30" />
       </div>
 
-      {/* Main Info */}
+      {/* Main Info — SEO-optimized H1/H2 */}
       <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[var(--color-text-primary)] leading-tight mb-2">
-        {hostel.name}
+        {hostel.seo?.h1 || hostel.name}
       </h1>
       <h2 className={`text-base md:text-lg font-bold mb-4 ${isBoys ? 'text-[var(--color-boys-accent)]' : 'text-[var(--color-girls-accent)]'}`}>
-        {hostel.branchLabel || hostel.area}
+        {hostel.seo?.h2 || hostel.branchLabel || hostel.area}
       </h2>
+
+      {/* Unique Intro Paragraph */}
+      {hostel.seo?.introParagraph && (
+        <p className="text-sm md:text-base text-[var(--color-text-body)] leading-relaxed mb-6">
+          {hostel.seo.introParagraph}
+        </p>
+      )}
 
       {/* Location */}
       <div className="flex items-start gap-2.5 text-sm md:text-base text-[var(--color-text-body)] mb-6">

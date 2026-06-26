@@ -104,7 +104,7 @@ export default function GalleryPage() {
                   <span className="inline-block px-2.5 py-1 bg-[var(--color-accent)] text-white text-[10px] font-bold uppercase tracking-wider rounded mb-2">
                     {image.category}
                   </span>
-                  <h3 className="text-white font-bold text-lg leading-tight">
+                  <h3 className="!text-white font-bold text-lg leading-tight">
                     {image.title}
                   </h3>
                 </div>
