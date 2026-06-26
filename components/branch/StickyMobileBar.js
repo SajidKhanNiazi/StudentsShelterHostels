@@ -20,7 +20,7 @@ export default function StickyMobileBar({ hostel }) {
         className="flex-1 flex flex-col items-center justify-center gap-0.5 border border-gray-200 bg-gray-50 rounded-xl py-2 text-[var(--color-text-primary)] font-bold transition-all min-h-[48px]"
         aria-label="Call Branch Manager"
       >
-        <Phone className="w-4 h-4 text-blue-600 shrink-0" />
+        <Phone className="w-4 h-4 shrink-0" style={{ color: isBoys ? '#1B9E99' : '#9C69AA' }} />
         <span className="text-[10px]">Call</span>
       </a>
 

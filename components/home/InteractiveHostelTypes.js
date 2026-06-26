@@ -13,7 +13,7 @@ const tabs = [
 const content = {
   girls: {
     title: "Girls Hostel in Islamabad",
-    desc: "Student’s Shelter Girls Hostel offers premium student housing, so that you can follow your path to success cautiously. Your safety and wellbeing is our first priority. Our attention has always been on cleanliness, safety, friendliness, and comfort.",
+    desc: "Student's Shelter Girls Hostel offers premium student housing, so that you can follow your path to success cautiously. Your safety and wellbeing is our first priority. Our attention has always been on cleanliness, safety, friendliness, and comfort.",
     services: [
       "Furnished rooms with beds & cupboards",
       "Three times quality meal",
@@ -43,7 +43,7 @@ const content = {
       "24/7 Power backup"
     ],
     location: "📍 Available across prime locations in Islamabad for easy commute to universities and commercial hubs.",
-    theme: "blue"
+    theme: "teal"
   },
   students: {
     title: "Student Hostels in Islamabad",
@@ -73,8 +73,17 @@ const content = {
   }
 };
 
+const themeColors = {
+  purple: { bg: '#faf5fc', border: '#dfc0eb', heading: '#3d1a4d', text: '#5A2870' },
+  teal: { bg: '#f0fafa', border: '#a1e4e2', heading: '#054255', text: '#075A6D' },
+  emerald: { bg: '#ecfdf5', border: '#a7f3d0', heading: '#064e3b', text: '#065f46' },
+  amber: { bg: '#fffbeb', border: '#fde68a', heading: '#78350f', text: '#92400e' },
+};
+
 export default function InteractiveHostelTypes() {
   const [activeTab, setActiveTab] = useState('girls');
+
+  const colors = themeColors[content[activeTab].theme];
 
   return (
     <div className="w-full mb-16">
@@ -87,18 +96,19 @@ export default function InteractiveHostelTypes() {
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
               className={`relative flex items-center gap-2 px-6 py-3 rounded-full font-bold transition-all duration-300 shadow-sm ${
-                isActive ? 'text-white shadow-md' : 'bg-white border border-gray-200 text-gray-600 hover:bg-gray-50 hover:text-[var(--color-primary)]'
+                isActive ? 'text-white shadow-md' : 'bg-white border border-gray-200 text-gray-600 hover:bg-gray-50'
               }`}
             >
               {isActive && (
                 <motion.div
                   layoutId="active-tab"
-                  className="absolute inset-0 bg-[var(--color-primary)] rounded-full z-0"
+                  className="absolute inset-0 rounded-full z-0"
+                  style={{ background: 'linear-gradient(135deg, #075A6D, #1B9E99)' }}
                   initial={false}
                   transition={{ type: "spring", stiffness: 500, damping: 30 }}
                 />
               )}
-              <Icon className={`w-5 h-5 relative z-10 ${isActive ? 'text-[var(--color-accent)]' : ''}`} />
+              <Icon className={`w-5 h-5 relative z-10 ${isActive ? 'text-[#3DBAB5]' : ''}`} />
               <span className="relative z-10 tracking-wide">{tab.label}</span>
             </button>
           );
@@ -124,18 +134,10 @@ export default function InteractiveHostelTypes() {
               </p>
 
               <div className="grid md:grid-cols-2 gap-8">
-                <div className={`p-6 rounded-xl border flex flex-col justify-center ${
-                  content[activeTab].theme === 'purple' ? 'bg-purple-50 border-purple-100' :
-                  content[activeTab].theme === 'blue' ? 'bg-blue-50 border-blue-100' :
-                  content[activeTab].theme === 'emerald' ? 'bg-emerald-50 border-emerald-100' :
-                  'bg-amber-50 border-amber-100'
-                }`}>
-                  <h3 className={`text-xl font-bold mb-5 ${
-                    content[activeTab].theme === 'purple' ? 'text-purple-900' :
-                    content[activeTab].theme === 'blue' ? 'text-blue-900' :
-                    content[activeTab].theme === 'emerald' ? 'text-emerald-900' :
-                    'text-amber-900'
-                  }`}>
+                <div className="p-6 rounded-xl flex flex-col justify-center"
+                  style={{ background: colors.bg, border: `1px solid ${colors.border}` }}
+                >
+                  <h3 className="text-xl font-bold mb-5" style={{ color: colors.heading }}>
                     Features & Services
                   </h3>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-y-3 gap-x-4">
@@ -145,14 +147,10 @@ export default function InteractiveHostelTypes() {
                         initial={{ opacity: 0, x: -10 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: idx * 0.05 }}
-                        className={`flex items-start gap-2 font-medium text-sm md:text-base ${
-                          content[activeTab].theme === 'purple' ? 'text-purple-800' :
-                          content[activeTab].theme === 'blue' ? 'text-blue-800' :
-                          content[activeTab].theme === 'emerald' ? 'text-emerald-800' :
-                          'text-amber-800'
-                        }`}
+                        className="flex items-start gap-2 font-medium text-sm md:text-base"
+                        style={{ color: colors.text }}
                       >
-                        <span className="mt-1 text-[var(--color-accent)] font-bold text-lg leading-none">•</span>
+                        <span className="mt-1 font-bold text-lg leading-none" style={{ color: content[activeTab].theme === 'teal' ? '#1B9E99' : content[activeTab].theme === 'purple' ? '#9C69AA' : '#1B9E99' }}>•</span>
                         {service}
                       </motion.li>
                     ))}
@@ -164,11 +162,11 @@ export default function InteractiveHostelTypes() {
                     <div className="bg-gray-50 p-6 rounded-xl border border-gray-200 h-full flex flex-col justify-center shadow-sm">
                       <div className="flex items-start gap-4">
                         <div className="bg-white p-3 rounded-full shadow-sm border border-gray-100">
-                           <MapPin className="text-[var(--color-accent)] w-8 h-8 shrink-0" />
+                           <MapPin className="w-8 h-8 shrink-0" style={{ color: '#1B9E99' }} />
                         </div>
                         <p className="text-gray-700 font-medium leading-relaxed text-[15px]">
                           {content[activeTab].location.split(':').map((part, i) => 
-                            i === 0 ? <strong key={i} className="text-[var(--color-primary)] block mb-2 text-xl font-display">{part}:</strong> : part
+                            i === 0 ? <strong key={i} className="block mb-2 text-xl font-display" style={{ color: '#075A6D' }}>{part}:</strong> : part
                           )}
                         </p>
                       </div>

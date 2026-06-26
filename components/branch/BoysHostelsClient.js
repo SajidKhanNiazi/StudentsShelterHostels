@@ -25,12 +25,14 @@ export default function BoysHostelsClient() {
         <Breadcrumb items={breadcrumbItems} />
 
         {/* Title Section */}
-        <div className="bg-gradient-to-br from-[var(--color-boys-primary)] to-[var(--color-boys-accent)] rounded-3xl p-8 md:p-12 text-white shadow-lg mb-8">
+        <div className="rounded-3xl p-8 md:p-12 text-white shadow-lg mb-8"
+          style={{ background: 'linear-gradient(135deg, #054255, #075A6D, #1B9E99)' }}
+        >
           <div className="max-w-3xl">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4 !text-white leading-tight">
               Boys Hostels in Islamabad
             </h1>
-            <p className="text-blue-100 text-base md:text-lg leading-relaxed">
+            <p className="text-base md:text-lg leading-relaxed" style={{ color: '#d0f2f1' }}>
               Safe, affordable, and centrally located student accommodation for boys in Islamabad. Direct access to Faizabad Metro Station, main universities, and commercial areas.
             </p>
           </div>
@@ -39,7 +41,7 @@ export default function BoysHostelsClient() {
         {/* Filters */}
         <div className="bg-white border border-[var(--color-border)] rounded-2xl p-4 md:p-5 shadow-sm mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div className="flex items-center gap-2">
-            <Filter className="w-5 h-5 text-[var(--color-boys-accent)] shrink-0" />
+            <Filter className="w-5 h-5 shrink-0" style={{ color: '#1B9E99' }} />
             <span className="font-bold text-sm text-[var(--color-text-primary)]">Filter by Area:</span>
           </div>
           <div className="flex flex-wrap gap-2">
@@ -49,9 +51,10 @@ export default function BoysHostelsClient() {
                 onClick={() => setAreaFilter(area)}
                 className={`px-4 py-2 text-xs font-bold rounded-xl border transition-all ${
                   areaFilter === area
-                    ? 'bg-[var(--color-boys-primary)] text-white border-[var(--color-boys-primary)] shadow-sm'
-                    : 'bg-gray-50 text-[var(--color-text-body)] border-[var(--color-border)] hover:bg-gray-100'
+                    ? 'text-white border-transparent shadow-sm'
+                    : 'bg-gray-50 text-[var(--color-text-body)] border-[var(--color-border)] hover:bg-[#d0f2f1]'
                 }`}
+                style={areaFilter === area ? { background: '#1B9E99', borderColor: '#1B9E99' } : {}}
               >
                 {area === 'All' ? 'All Areas' : `${area} Sector`}
               </button>
@@ -68,7 +71,7 @@ export default function BoysHostelsClient() {
 
         {/* SEO Text Block */}
         <div className="bg-white border border-[var(--color-border)] rounded-3xl p-6 md:p-10 shadow-sm mb-12">
-          <h2 className="text-xl md:text-2xl font-bold text-[var(--color-text-primary)] mb-4">
+          <h2 className="text-xl md:text-2xl font-bold text-[var(--teal-800)] mb-4">
             Premium Boys Student Hostels in Islamabad
           </h2>
           <div className="prose prose-slate max-w-none text-sm md:text-base text-[var(--color-text-body)] space-y-4 leading-relaxed">
@@ -83,14 +86,17 @@ export default function BoysHostelsClient() {
             </p>
           </div>
 
-          <div className="border-t border-[var(--color-border)] mt-8 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="border-t border-[var(--color-border)] mt-8 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4"
+            style={{ background: 'linear-gradient(135deg, #faf5fc, #f0e2f7)', margin: '2rem -1.5rem -1.5rem', padding: '1.5rem', borderRadius: '0 0 1.5rem 1.5rem', border: '1px solid #dfc0eb', borderTop: '1px solid #dfc0eb' }}
+          >
             <div>
               <p className="text-sm font-semibold text-[var(--color-text-primary)]">Also Looking for Girls Hostels?</p>
               <p className="text-xs text-[var(--color-text-muted)]">We offer premium separate girls accommodation in I-8/3 Islamabad.</p>
             </div>
             <Link
               href="/girls-hostels"
-              className="inline-flex items-center gap-1.5 px-5 py-3 border border-purple-200 text-purple-700 bg-purple-50 hover:bg-purple-100 rounded-xl text-xs font-bold transition-all min-h-[44px]"
+              className="inline-flex items-center gap-1.5 px-5 py-3 rounded-xl text-xs font-bold transition-all min-h-[44px] text-white"
+              style={{ background: 'linear-gradient(135deg, #783893, #9C69AA)' }}
             >
               Explore Girls Hostels
               <ArrowRight className="w-4 h-4" />

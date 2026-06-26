@@ -15,8 +15,14 @@ export default function BranchHero({ hostel }) {
         <div className="flex flex-col gap-2">
           <GenderBadge type={hostel.type} size="md" />
           {hostel.isGirlsOnly && (
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-purple-100 text-purple-800 text-xs font-semibold rounded-full border border-purple-200">
-              <ShieldCheck className="w-4 h-4 shrink-0 text-[var(--color-girls-accent)]" />
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 text-xs font-semibold rounded-full"
+              style={{
+                background: '#f0e2f7',
+                color: '#5A2870',
+                border: '1px solid #dfc0eb',
+              }}
+            >
+              <ShieldCheck className="w-4 h-4 shrink-0" style={{ color: '#9C69AA' }} />
               🔒 Girls Only — Maximum Security
             </span>
           )}
@@ -25,10 +31,10 @@ export default function BranchHero({ hostel }) {
       </div>
 
       {/* Main Info — SEO-optimized H1/H2 */}
-      <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-[var(--color-text-primary)] leading-tight mb-2">
+      <h1 className="text-2xl md:text-3xl lg:text-4xl font-extrabold leading-tight mb-2" style={{ color: isBoys ? '#054255' : '#3d1a4d' }}>
         {hostel.seo?.h1 || hostel.name}
       </h1>
-      <h2 className={`text-base md:text-lg font-bold mb-4 ${isBoys ? 'text-[var(--color-boys-accent)]' : 'text-[var(--color-girls-accent)]'}`}>
+      <h2 className="text-base md:text-lg font-bold mb-4" style={{ color: isBoys ? '#2A707F' : '#783893' }}>
         {hostel.seo?.h2 || hostel.branchLabel || hostel.area}
       </h2>
 
@@ -49,6 +55,7 @@ export default function BranchHero({ hostel }) {
       <div className="flex flex-wrap items-center gap-3 border-t border-[var(--color-border)] pt-5">
         <PhoneLink
           phone={hostel.phone || "0331-4343676"}
+          type={hostel.type}
           className="flex-1 sm:flex-none shadow-sm min-h-[48px]"
         />
         <WhatsAppButton

@@ -6,7 +6,7 @@ export default function BranchDirections({ directions, nearbyLandmarks, type = '
   return (
     <div className="bg-white border border-[var(--color-border)] rounded-2xl p-5 md:p-6 shadow-sm mb-8">
       <h3 className="text-lg md:text-xl font-bold text-[var(--color-text-primary)] mb-4 flex items-center gap-2">
-        <Compass className="w-5 h-5 text-blue-600 shrink-0" />
+        <Compass className="w-5 h-5 shrink-0" style={{ color: isBoys ? '#1B9E99' : '#9C69AA' }} />
         How to Get Here
       </h3>
 
@@ -32,8 +32,14 @@ export default function BranchDirections({ directions, nearbyLandmarks, type = '
                 <span className={`shrink-0 font-medium px-2 py-0.5 rounded-full text-[10px] md:text-xs ${
                   landmark.name.toLowerCase().includes('metro')
                     ? 'bg-red-100 text-red-700 border border-red-200'
-                    : 'bg-blue-100 text-blue-700 border border-blue-200'
-                }`}>
+                    : ''
+                }`}
+                  style={!landmark.name.toLowerCase().includes('metro') ? {
+                    background: isBoys ? '#d0f2f1' : '#f0e2f7',
+                    color: isBoys ? '#054255' : '#3d1a4d',
+                    border: isBoys ? '1px solid #a1e4e2' : '1px solid #dfc0eb',
+                  } : {}}
+                >
                   {landmark.distance}
                 </span>
               </div>

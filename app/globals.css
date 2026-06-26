@@ -1,31 +1,70 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fcfbf9;
+  --background: #f0fafa;
   --foreground: #1c1917;
 
-  /* Premium Elegant Color System (Dar-ul-Haya inspired) */
-  --color-primary: #23312b;      /* Deep forest/olive — trustworthy & grounded */
-  --color-accent: #b89c72;       /* Warm soft gold — elegant & premium */
-  --color-light: #f9f8f4;        /* Sand / Off-white — card bg */
-  --color-border: #e8e6df;       /* Warm subtle border */
+  /* Teal — Boys / Primary brand */
+  --teal-50:  #f0fafa;
+  --teal-100: #d0f2f1;
+  --teal-200: #a1e4e2;
+  --teal-400: #3DBAB5;
+  --teal-500: #1B9E99;
+  --teal-600: #2A707F;
+  --teal-700: #075A6D;
+  --teal-800: #054255;
+  --teal-900: #022e3a;
+
+  /* Purple — Girls */
+  --purple-50:  #faf5fc;
+  --purple-100: #f0e2f7;
+  --purple-200: #dfc0eb;
+  --purple-300: #C68FD0;
+  --purple-500: #9C69AA;
+  --purple-600: #8B62A1;
+  --purple-700: #783893;
+  --purple-800: #5A2870;
+  --purple-900: #3d1a4d;
+
+  /* Gradients */
+  --gradient-teal: linear-gradient(135deg, #075A6D, #1B9E99);
+  --gradient-purple: linear-gradient(135deg, #783893, #9C69AA);
+  --gradient-brand: linear-gradient(135deg, #075A6D 0%, #1B9E99 45%, #783893 100%);
+  --gradient-hero: linear-gradient(135deg, #022e3a 0%, #054255 35%, #3d1a4d 75%, #5A2870 100%);
+
+  /* Shadows */
+  --shadow-teal: 0 4px 20px rgba(27, 158, 153, 0.35);
+  --shadow-purple: 0 4px 20px rgba(156, 105, 170, 0.35);
+
+  /* Color System mapped to component vars */
+  --color-primary: #075A6D;
+  --color-accent: #1B9E99;
+  --color-light: #f0fafa;
+  --color-border: #a1e4e2;
 
   /* Neutral */
-  --color-text-primary: #1c1917; /* Near black — headings */
-  --color-text-body: #44403c;    /* Dark slate — body text */
-  --color-text-muted: #78716c;   /* Muted text */
-  --color-surface: #ffffff;      /* White */
-  --color-bg: #fcfbf9;           /* Global background */
+  --color-text-primary: #054255;
+  --color-text-body: #334155;
+  --color-text-muted: #64748b;
+  --color-surface: #ffffff;
+  --color-bg: #f0fafa;
 
   /* Semantic */
-  --color-whatsapp: #1f9453;
+  --color-whatsapp: #16a34a;
+  --color-whatsapp-dark: #15803d;
   --color-success: #15803d;
-  --color-boys-accent: #23312b;  /* Fallbacks for existing components */
-  --color-girls-accent: #b89c72;
-  --color-boys-primary: #23312b;
-  --color-girls-primary: #23312b;
-  --color-boys-border: #e8e6df;
-  --color-girls-border: #e8e6df;
+
+  /* Boys (teal) */
+  --color-boys-accent: #1B9E99;
+  --color-boys-primary: #075A6D;
+  --color-boys-border: #a1e4e2;
+  --color-boys-light: #d0f2f1;
+
+  /* Girls (purple) */
+  --color-girls-accent: #9C69AA;
+  --color-girls-primary: #783893;
+  --color-girls-border: #dfc0eb;
+  --color-girls-light: #f0e2f7;
 }
 
 @theme inline {
@@ -65,16 +104,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f5f4f0;
+  background: #f0fafa;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #d6d3cd;
+  background: #a1e4e2;
   border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #b89c72;
+  background: #3DBAB5;
 }
 
 /* Smooth page transitions */
@@ -110,7 +149,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .card-hover:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px -10px rgba(27, 158, 153, 0.12);
 }
 
 /* Focus styles */

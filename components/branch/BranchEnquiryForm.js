@@ -44,11 +44,16 @@ export default function BranchEnquiryForm({ branchName, hostelType }) {
   };
 
   const isBoys = hostelType === 'boys';
-  const accentColor = isBoys ? 'bg-[var(--color-boys-primary)] hover:bg-[var(--color-boys-accent)]' : 'bg-[var(--color-girls-primary)] hover:bg-[var(--color-girls-accent)]';
-  const focusRing = isBoys ? 'focus:ring-[var(--color-boys-accent)] focus:border-[var(--color-boys-accent)]' : 'focus:ring-[var(--color-girls-accent)] focus:border-[var(--color-girls-accent)]';
+  const brandColor = isBoys ? '#075A6D' : '#783893';
+  const brandHover = isBoys ? '#1B9E99' : '#9C69AA';
+  const focusRingColor = isBoys ? '#1B9E99' : '#9C69AA';
+  const lightBg = isBoys ? '#f0fafa' : '#faf5fc';
+  const borderColor = isBoys ? '#a1e4e2' : '#dfc0eb';
 
   return (
-    <div className="bg-white border border-[var(--color-border)] rounded-2xl p-5 md:p-6 shadow-sm mb-8">
+    <div className="bg-white border rounded-2xl p-5 md:p-6 shadow-sm mb-8"
+      style={{ borderColor: borderColor }}
+    >
       <h3 className="text-lg md:text-xl font-bold text-[var(--color-text-primary)] mb-1">
         Enquire About This Branch
       </h3>
@@ -57,15 +62,18 @@ export default function BranchEnquiryForm({ branchName, hostelType }) {
       </p>
 
       {isSuccess ? (
-        <div className="bg-green-50 border border-green-200 rounded-xl p-5 text-center">
-          <CheckCircle className="w-12 h-12 text-green-600 mx-auto mb-3" />
-          <h4 className="text-base font-bold text-green-900 mb-1">Inquiry Submitted!</h4>
-          <p className="text-xs text-green-700 leading-relaxed mb-4">
+        <div className="border rounded-xl p-5 text-center"
+          style={{ background: isBoys ? '#f0fafa' : '#faf5fc', borderColor: borderColor }}
+        >
+          <CheckCircle className="w-12 h-12 mx-auto mb-3" style={{ color: isBoys ? '#1B9E99' : '#9C69AA' }} />
+          <h4 className="text-base font-bold mb-1" style={{ color: isBoys ? '#054255' : '#3d1a4d' }}>Inquiry Submitted!</h4>
+          <p className="text-xs leading-relaxed mb-4" style={{ color: isBoys ? '#075A6D' : '#783893' }}>
             Thank you for reaching out. We will call you back within 24 hours.
           </p>
           <button
             onClick={() => setIsSuccess(false)}
-            className="text-xs font-bold text-green-800 underline hover:text-green-900"
+            className="text-xs font-bold underline"
+            style={{ color: brandColor }}
           >
             Send another inquiry
           </button>
@@ -92,7 +100,13 @@ export default function BranchEnquiryForm({ branchName, hostelType }) {
               type="text"
               id="name"
               {...register('name', { required: 'Full name is required' })}
-              className={`w-full px-3.5 py-2.5 bg-gray-50 border border-[var(--color-border)] rounded-xl text-sm outline-none transition-all ${focusRing}`}
+              className="w-full px-3.5 py-2.5 bg-gray-50 border rounded-xl text-sm outline-none transition-all focus:ring-2 focus:bg-white"
+              style={{
+                borderColor: '#e2e8f0',
+                '--tw-ring-color': focusRingColor,
+                '--tw-ring-offset-shadow': 'var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color)',
+                '--tw-ring-shadow': 'var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color)'
+              }}
               placeholder="Enter your full name"
             />
             {errors.name && (
@@ -115,7 +129,11 @@ export default function BranchEnquiryForm({ branchName, hostelType }) {
                   message: 'Please enter a valid phone number (e.g., 03314343676)',
                 },
               })}
-              className={`w-full px-3.5 py-2.5 bg-gray-50 border border-[var(--color-border)] rounded-xl text-sm outline-none transition-all ${focusRing}`}
+              className="w-full px-3.5 py-2.5 bg-gray-50 border rounded-xl text-sm outline-none transition-all focus:ring-2 focus:bg-white"
+              style={{
+                borderColor: '#e2e8f0',
+                '--tw-ring-color': focusRingColor
+              }}
               placeholder="e.g. 03314343676"
             />
             {errors.phone && (
@@ -132,7 +150,11 @@ export default function BranchEnquiryForm({ branchName, hostelType }) {
               type="date"
               id="moveInDate"
               {...register('moveInDate')}
-              className={`w-full px-3.5 py-2.5 bg-gray-50 border border-[var(--color-border)] rounded-xl text-sm outline-none transition-all ${focusRing}`}
+              className="w-full px-3.5 py-2.5 bg-gray-50 border rounded-xl text-sm outline-none transition-all focus:ring-2 focus:bg-white"
+              style={{
+                borderColor: '#e2e8f0',
+                '--tw-ring-color': focusRingColor
+              }}
             />
           </div>
 
@@ -145,7 +167,11 @@ export default function BranchEnquiryForm({ branchName, hostelType }) {
               id="message"
               rows={3}
               {...register('message')}
-              className={`w-full px-3.5 py-2.5 bg-gray-50 border border-[var(--color-border)] rounded-xl text-sm outline-none transition-all resize-none ${focusRing}`}
+              className="w-full px-3.5 py-2.5 bg-gray-50 border rounded-xl text-sm outline-none transition-all resize-none focus:ring-2 focus:bg-white"
+              style={{
+                borderColor: '#e2e8f0',
+                '--tw-ring-color': focusRingColor
+              }}
               placeholder="Ask about sharing rooms, pricing details, or scheduling a visit..."
             />
           </div>
@@ -154,7 +180,12 @@ export default function BranchEnquiryForm({ branchName, hostelType }) {
           <button
             type="submit"
             disabled={isSubmitting}
-            className={`w-full inline-flex items-center justify-center gap-2 px-5 py-3 text-white font-bold rounded-xl shadow transition-all min-h-[48px] active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none ${accentColor}`}
+            className="w-full inline-flex items-center justify-center gap-2 px-5 py-3 text-white font-bold rounded-xl shadow transition-all min-h-[48px] active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none"
+            style={{
+              background: brandColor,
+            }}
+            onMouseOver={(e) => e.currentTarget.style.background = brandHover}
+            onMouseOut={(e) => e.currentTarget.style.background = brandColor}
           >
             <Send className="w-4 h-4 shrink-0" />
             {isSubmitting ? 'Submitting...' : 'Send Inquiry'}

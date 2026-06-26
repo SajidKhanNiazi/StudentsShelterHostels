@@ -9,21 +9,25 @@ function BranchCard({ hostel, colorScheme }) {
 
   return (
     <div
-      className={`rounded-2xl border-2 overflow-hidden card-hover bg-white ${
-        isBoys ? 'border-blue-200 hover:border-blue-300' : 'border-purple-200 hover:border-purple-300'
-      }`}
+      className="rounded-2xl overflow-hidden card-hover bg-white"
+      style={{
+        border: isBoys ? '2px solid #a1e4e2' : '2px solid #dfc0eb',
+      }}
     >
       {/* Gradient Header */}
       <div
-        className={`px-6 py-4 ${
-          isBoys
-            ? 'bg-gradient-to-r from-blue-50 to-blue-100/50'
-            : 'bg-gradient-to-r from-purple-50 to-purple-100/50'
-        }`}
+        className="px-6 py-4"
+        style={{
+          background: isBoys
+            ? 'linear-gradient(135deg, #f0fafa, #d0f2f1)'
+            : 'linear-gradient(135deg, #faf5fc, #f0e2f7)',
+        }}
       >
         <GenderBadge type={colorScheme} size="sm" />
         {hostel.isGirlsOnly && (
-          <div className="mt-2 inline-flex items-center gap-1 px-2.5 py-1 bg-purple-600 text-white text-xs font-semibold rounded-full">
+          <div className="mt-2 inline-flex items-center gap-1 px-2.5 py-1 text-white text-xs font-semibold rounded-full"
+            style={{ background: 'linear-gradient(135deg, #783893, #9C69AA)' }}
+          >
             <ShieldCheck className="w-3.5 h-3.5" />
             Girls Only — Secure Entry
           </div>
@@ -33,7 +37,7 @@ function BranchCard({ hostel, colorScheme }) {
       <div className="p-6">
         <h3 className="text-xl font-bold text-gray-900 mb-1">{hostel.name}</h3>
         {hostel.branch && (
-          <p className={`text-sm font-semibold mb-3 ${isBoys ? 'text-blue-600' : 'text-purple-600'}`}>
+          <p className="text-sm font-semibold mb-3" style={{ color: isBoys ? '#2A707F' : '#783893' }}>
             {hostel.branch}
           </p>
         )}
@@ -45,9 +49,12 @@ function BranchCard({ hostel, colorScheme }) {
           </div>
           {hostel.landmark && (
             <div
-              className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold ${
-                isBoys ? 'bg-blue-50 text-blue-700' : 'bg-purple-50 text-purple-700'
-              }`}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold"
+              style={{
+                background: isBoys ? '#d0f2f1' : '#f0e2f7',
+                color: isBoys ? '#054255' : '#3d1a4d',
+                border: isBoys ? '1px solid #a1e4e2' : '1px solid #dfc0eb',
+              }}
             >
               📍 {hostel.landmark}
             </div>
@@ -56,7 +63,7 @@ function BranchCard({ hostel, colorScheme }) {
 
         {hostel.phone && (
           <div className="mb-4">
-            <PhoneLink phone={hostel.phone} />
+            <PhoneLink phone={hostel.phone} type={colorScheme} />
           </div>
         )}
 
@@ -80,11 +87,12 @@ function BranchCard({ hostel, colorScheme }) {
           {hostel.phone ? (
             <a
               href={`tel:${hostel.phone.replace(/[^0-9]/g, '')}`}
-              className={`flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-semibold text-sm transition-all min-h-[48px] ${
-                isBoys
-                  ? 'bg-blue-600 hover:bg-blue-700 text-white'
-                  : 'bg-purple-600 hover:bg-purple-700 text-white'
-              }`}
+              className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-semibold text-sm transition-all min-h-[48px] text-white"
+              style={{
+                background: isBoys
+                  ? 'linear-gradient(135deg, #075A6D, #1B9E99)'
+                  : 'linear-gradient(135deg, #783893, #9C69AA)',
+              }}
             >
               <Phone className="w-4 h-4" />
               {hostel.phone}
@@ -94,11 +102,12 @@ function BranchCard({ hostel, colorScheme }) {
               href={hostel.googleMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className={`flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-semibold text-sm transition-all min-h-[48px] ${
-                isBoys
-                  ? 'bg-blue-600 hover:bg-blue-700 text-white'
-                  : 'bg-purple-600 hover:bg-purple-700 text-white'
-              }`}
+              className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-semibold text-sm transition-all min-h-[48px] text-white"
+              style={{
+                background: isBoys
+                  ? 'linear-gradient(135deg, #075A6D, #1B9E99)'
+                  : 'linear-gradient(135deg, #783893, #9C69AA)',
+              }}
             >
               <Navigation className="w-4 h-4" />
               Get Directions
@@ -120,7 +129,7 @@ export default function FeaturedBranches() {
     <section className="py-16 md:py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 tracking-tight mb-3">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight mb-3" style={{ color: '#054255' }}>
             Our Main Branches
           </h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">

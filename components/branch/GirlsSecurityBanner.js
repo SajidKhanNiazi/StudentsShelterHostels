@@ -2,7 +2,9 @@ import { ShieldAlert, ShieldCheck, UserCheck, Video } from 'lucide-react';
 
 export default function GirlsSecurityBanner({ securityFeatures }) {
   return (
-    <div className="bg-gradient-to-r from-[var(--color-girls-primary)] to-[var(--color-girls-accent)] rounded-2xl p-5 md:p-6 text-white shadow-md mb-8">
+    <div className="rounded-2xl p-5 md:p-6 text-white shadow-md mb-8"
+      style={{ background: 'linear-gradient(135deg, #783893, #9C69AA)' }}
+    >
       <div className="flex items-start gap-4">
         <div className="p-3 bg-white/10 rounded-xl">
           <ShieldAlert className="w-6 h-6 text-white" />
@@ -11,7 +13,7 @@ export default function GirlsSecurityBanner({ securityFeatures }) {
           <h3 className="text-base md:text-lg font-bold mb-1 flex items-center gap-1.5">
             🔒 Girls Only Hostel — Female Staff & Management
           </h3>
-          <p className="text-xs md:text-sm text-purple-100 leading-relaxed mb-4">
+          <p className="text-xs md:text-sm leading-relaxed mb-4" style={{ color: '#f0e2f7' }}>
             We prioritize the safety and privacy of our female residents. Our hostels feature secure access controls and 24/7 on-site assistance.
           </p>
 

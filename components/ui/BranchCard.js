@@ -14,16 +14,21 @@ export default function BranchCard({ hostel }) {
   const LandmarkIcon = iconMap[hostel.landmarkIcon] || MapPin;
 
   return (
-    <div className="relative bg-white rounded border border-[var(--color-border)] shadow-sm card-hover flex flex-col group">
+    <div
+      className="relative bg-white rounded shadow-sm card-hover flex flex-col group"
+      style={{
+        border: isBoys ? '1px solid #a1e4e2' : '1px solid #dfc0eb',
+      }}
+    >
       {/* Top Header */}
-      <div className="px-6 pt-6 pb-4 flex items-center justify-between gap-4 border-b border-[var(--color-border)]/50">
+      <div className="px-6 pt-6 pb-4 flex items-center justify-between gap-4" style={{ borderBottom: isBoys ? '1px solid rgba(161,228,226,0.5)' : '1px solid rgba(223,192,235,0.5)' }}>
         <div className="flex flex-col gap-1.5">
-          <span className="text-[10px] font-bold tracking-widest uppercase text-[var(--color-accent)]">
+          <span className="text-[10px] font-bold tracking-widest uppercase" style={{ color: isBoys ? '#1B9E99' : '#9C69AA' }}>
             {hostel.type === 'boys' ? 'Boys Hostel' : 'Girls Hostel'}
           </span>
           {hostel.isGirlsOnly && (
             <span className="inline-flex items-center gap-1 text-[10px] text-[var(--color-text-muted)] italic">
-              <ShieldCheck className="w-3.5 h-3.5 text-[var(--color-accent)]" />
+              <ShieldCheck className="w-3.5 h-3.5" style={{ color: '#9C69AA' }} />
               Secure Female Staff
             </span>
           )}
@@ -40,19 +45,19 @@ export default function BranchCard({ hostel }) {
             {hostel.name}
           </h3>
           {hostel.branchLabel && (
-            <p className="text-xs font-medium text-[var(--color-text-muted)] mb-5">
+            <p className="text-xs font-medium mb-5" style={{ color: isBoys ? '#2A707F' : '#783893' }}>
               {hostel.branchLabel}
             </p>
           )}
 
           <div className="space-y-3 mb-6">
             <div className="flex items-start gap-3 text-sm text-[var(--color-text-body)]">
-              <MapPin className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-accent)]" />
+              <MapPin className="w-4 h-4 mt-0.5 shrink-0" style={{ color: isBoys ? '#1B9E99' : '#9C69AA' }} />
               <span className="leading-relaxed text-xs">{hostel.fullAddress}</span>
             </div>
             {hostel.landmark && (
                <div className="flex items-start gap-3 text-sm text-[var(--color-text-body)]">
-                <LandmarkIcon className="w-4 h-4 mt-0.5 shrink-0 text-[var(--color-accent)]" />
+                <LandmarkIcon className="w-4 h-4 mt-0.5 shrink-0" style={{ color: isBoys ? '#1B9E99' : '#9C69AA' }} />
                 <span className="font-medium text-xs text-[var(--color-text-body)]">{hostel.landmark}</span>
               </div>
             )}
@@ -66,7 +71,12 @@ export default function BranchCard({ hostel }) {
               href={hostel.googleMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-1.5 px-3 py-2 border border-[var(--color-border)] bg-[var(--color-light)] hover:bg-[var(--color-border)] rounded text-xs font-medium text-[var(--color-text-primary)] transition-colors min-h-[40px]"
+              className="inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded text-xs font-medium transition-colors min-h-[40px]"
+              style={{
+                border: isBoys ? '1.5px solid #1B9E99' : '1.5px solid #9C69AA',
+                color: isBoys ? '#075A6D' : '#783893',
+                background: 'white',
+              }}
             >
               <ExternalLink className="w-3.5 h-3.5" />
               Map
@@ -75,12 +85,17 @@ export default function BranchCard({ hostel }) {
               whatsapp={hostel.whatsapp}
               message={`Hi, I'm interested in ${hostel.name} (${hostel.branchLabel || hostel.area}). Please share details.`}
               variant="small"
-              className="!rounded !min-h-[40px] !bg-[var(--color-whatsapp)] hover:!bg-[#15803d]"
+              className="!rounded !min-h-[40px] !bg-[#16a34a] hover:!bg-[#15803d]"
             />
           </div>
           <Link
             href={detailUrl}
-            className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded text-xs font-medium transition-colors min-h-[40px] bg-[var(--color-primary)] text-white hover:bg-[var(--color-text-primary)]"
+            className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded text-xs font-medium transition-colors min-h-[40px] text-white"
+            style={{
+              background: isBoys
+                ? 'linear-gradient(135deg, #075A6D, #1B9E99)'
+                : 'linear-gradient(135deg, #783893, #9C69AA)',
+            }}
           >
             View Details
             <ArrowRight className="w-4 h-4 opacity-70 group-hover:translate-x-1 transition-transform" />

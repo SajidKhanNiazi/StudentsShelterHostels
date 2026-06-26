@@ -9,18 +9,24 @@ export default function BranchHeader({ hostel }) {
       <GenderBadge type={hostel.type} size="md" className="mb-4" />
 
       {hostel.isGirlsOnly && (
-        <div className="mb-4 inline-flex items-center gap-2 px-4 py-2 bg-purple-100 border border-purple-200 text-purple-800 rounded-xl text-sm font-semibold">
+        <div className="mb-4 inline-flex items-center gap-2 px-4 py-2 text-sm font-semibold rounded-xl"
+          style={{
+            background: '#f0e2f7',
+            border: '1px solid #dfc0eb',
+            color: '#5A2870',
+          }}
+        >
           <ShieldCheck className="w-5 h-5" />
           Girls Only — Female Staff — Secure Entry
         </div>
       )}
 
-      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 tracking-tight mb-2">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-2" style={{ color: '#054255' }}>
         {hostel.name}
       </h1>
 
       {hostel.branch && (
-        <p className={`text-lg md:text-xl font-semibold mb-4 ${isBoys ? 'text-blue-600' : 'text-purple-600'}`}>
+        <p className="text-lg md:text-xl font-semibold mb-4" style={{ color: isBoys ? '#2A707F' : '#783893' }}>
           {hostel.branch}
         </p>
       )}
@@ -32,9 +38,12 @@ export default function BranchHeader({ hostel }) {
         </div>
         {hostel.landmark && (
           <div
-            className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-semibold ${
-              isBoys ? 'bg-blue-50 text-blue-700' : 'bg-purple-50 text-purple-700'
-            }`}
+            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-semibold"
+            style={{
+              background: isBoys ? '#d0f2f1' : '#f0e2f7',
+              color: isBoys ? '#054255' : '#3d1a4d',
+              border: isBoys ? '1px solid #a1e4e2' : '1px solid #dfc0eb',
+            }}
           >
             <Train className="w-4 h-4" />
             {hostel.landmark}

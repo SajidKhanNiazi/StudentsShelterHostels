@@ -15,18 +15,18 @@ const roomIcons = {
 
 const roomColors = {
   'single': {
-    gradient: 'from-blue-600 to-blue-800',
-    bg: 'bg-blue-50',
-    border: 'border-blue-200',
-    text: 'text-blue-700',
-    badge: 'bg-blue-100 text-blue-700',
+    gradient: 'from-[#075A6D] to-[#054255]',
+    bg: 'bg-[#f0fafa]',
+    border: 'border-[#a1e4e2]',
+    text: 'text-[#075A6D]',
+    badge: 'bg-blue-100 text-[#075A6D]',
   },
   'double': {
-    gradient: 'from-purple-600 to-purple-800',
-    bg: 'bg-purple-50',
-    border: 'border-purple-200',
-    text: 'text-purple-700',
-    badge: 'bg-purple-100 text-purple-700',
+    gradient: 'from-[#783893] to-[#5A2870]',
+    bg: 'bg-[#faf5fc]',
+    border: 'border-[#dfc0eb]',
+    text: 'text-[#783893]',
+    badge: 'bg-purple-100 text-[#783893]',
   },
   'triple': {
     gradient: 'from-green-600 to-emerald-800',
@@ -50,7 +50,7 @@ export default function RoomsPage() {
   return (
     <div className="min-h-screen bg-[var(--color-bg)] py-8">
       {/* Hero */}
-      <div className="bg-gradient-to-br from-blue-50 via-white to-purple-50 py-12 md:py-16 mb-8 border-b border-[var(--color-border)]">
+      <div className="bg-gradient-to-br from-[#f0fafa] via-white to-[#faf5fc] py-12 md:py-16 mb-8 border-b border-[var(--color-border)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[var(--color-text-primary)] mb-3">
             Room Types & Pricing
@@ -137,7 +137,7 @@ export default function RoomsPage() {
                   key={item.name}
                   className="flex items-center gap-3 p-4 bg-[var(--color-bg)] rounded-xl border border-gray-100"
                 >
-                  <Icon className="w-6 h-6 text-blue-600 shrink-0" />
+                  <Icon className="w-6 h-6 text-[#1B9E99] shrink-0" />
                   <span className="text-xs md:text-sm font-semibold text-[var(--color-text-body)]">{item.name}</span>
                 </div>
               );
@@ -161,3 +161,4 @@ export default function RoomsPage() {
     </div>
   );
 }
+

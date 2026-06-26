@@ -9,18 +9,25 @@ export default function LocationCard({ hostel }) {
 
   return (
     <div
-      className={`bg-white rounded-2xl border-2 overflow-hidden card-hover ${
-        isBoys ? 'border-blue-100 hover:border-blue-300' : 'border-purple-100 hover:border-purple-300'
-      }`}
+      className="bg-white rounded-2xl overflow-hidden card-hover"
+      style={{
+        border: isBoys ? '2px solid #a1e4e2' : '2px solid #dfc0eb',
+      }}
     >
       {/* Color bar */}
-      <div className={`h-1.5 ${isBoys ? 'bg-gradient-to-r from-blue-500 to-blue-600' : 'bg-gradient-to-r from-purple-500 to-purple-600'}`} />
+      <div className="h-1.5" style={{
+        background: isBoys
+          ? 'linear-gradient(135deg, #075A6D, #1B9E99)'
+          : 'linear-gradient(135deg, #783893, #9C69AA)',
+      }} />
 
       <div className="p-5 md:p-6">
         <div className="flex items-start justify-between gap-3 mb-3">
           <GenderBadge type={hostel.type} size="xs" />
           {hostel.isGirlsOnly && (
-            <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-purple-100 text-purple-700 text-[10px] font-semibold rounded-full">
+            <span className="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] font-semibold rounded-full"
+              style={{ background: '#f0e2f7', color: '#783893', border: '1px solid #dfc0eb' }}
+            >
               <ShieldCheck className="w-3 h-3" />
               Girls Only
             </span>
@@ -29,7 +36,7 @@ export default function LocationCard({ hostel }) {
 
         <h3 className="text-lg font-bold text-gray-900 mb-0.5">{hostel.name}</h3>
         {hostel.branch && (
-          <p className={`text-sm font-semibold mb-3 ${isBoys ? 'text-blue-600' : 'text-purple-600'}`}>
+          <p className="text-sm font-semibold mb-3" style={{ color: isBoys ? '#2A707F' : '#783893' }}>
             {hostel.branch}
           </p>
         )}
@@ -54,7 +61,11 @@ export default function LocationCard({ hostel }) {
               href={hostel.googleMapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2.5 border border-gray-200 rounded-xl text-sm font-medium text-gray-700 hover:bg-gray-50 transition-all min-h-[44px]"
+              className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl text-sm font-medium transition-all min-h-[44px]"
+              style={{
+                border: isBoys ? '1.5px solid #1B9E99' : '1.5px solid #9C69AA',
+                color: isBoys ? '#075A6D' : '#783893',
+              }}
             >
               <ExternalLink className="w-3.5 h-3.5" />
               View on Map
@@ -68,11 +79,12 @@ export default function LocationCard({ hostel }) {
           </div>
           <Link
             href={detailUrl}
-            className={`w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all min-h-[44px] ${
-              isBoys
-                ? 'bg-blue-50 text-blue-700 hover:bg-blue-100'
-                : 'bg-purple-50 text-purple-700 hover:bg-purple-100'
-            }`}
+            className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-semibold transition-all min-h-[44px]"
+            style={{
+              background: isBoys ? '#d0f2f1' : '#f0e2f7',
+              color: isBoys ? '#054255' : '#3d1a4d',
+              border: isBoys ? '1px solid #a1e4e2' : '1px solid #dfc0eb',
+            }}
           >
             View Details
             <ArrowRight className="w-4 h-4" />

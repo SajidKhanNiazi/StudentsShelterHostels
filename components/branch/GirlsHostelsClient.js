@@ -25,20 +25,26 @@ export default function GirlsHostelsClient() {
         <Breadcrumb items={breadcrumbItems} />
 
         {/* Title Section */}
-        <div className="bg-gradient-to-br from-[var(--color-girls-primary)] to-[var(--color-girls-accent)] rounded-3xl p-8 md:p-12 text-white shadow-lg mb-8">
+        <div className="rounded-3xl p-8 md:p-12 text-white shadow-lg mb-8"
+          style={{ background: 'linear-gradient(135deg, #5A2870, #783893, #9C69AA)' }}
+        >
           <div className="max-w-3xl">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4 !text-white leading-tight">
               Girls Hostels in Islamabad
             </h1>
-            <p className="text-purple-100 text-base md:text-lg leading-relaxed">
+            <p className="text-base md:text-lg leading-relaxed" style={{ color: '#f0e2f7' }}>
               Premium, highly secure separate student hostels for girls in Islamabad. Situated in sector I-8/3, offering female staff and robust security options for complete peace of mind.
             </p>
           </div>
         </div>
 
         {/* Girls Security Note Banner */}
-        <div className="bg-purple-100 border-2 border-[var(--color-girls-border)] rounded-2xl p-5 mb-8 flex flex-col md:flex-row items-start md:items-center gap-4">
-          <div className="w-12 h-12 rounded-xl bg-purple-200 flex items-center justify-center text-[var(--color-girls-primary)] shrink-0">
+        <div className="rounded-2xl p-5 mb-8 flex flex-col md:flex-row items-start md:items-center gap-4"
+          style={{ background: '#faf5fc', border: '2px solid #dfc0eb' }}
+        >
+          <div className="w-12 h-12 rounded-xl flex items-center justify-center shrink-0"
+            style={{ background: '#f0e2f7', color: '#783893' }}
+          >
             <ShieldCheck className="w-6 h-6" />
           </div>
           <div>
@@ -54,7 +60,7 @@ export default function GirlsHostelsClient() {
         {/* Filters */}
         <div className="bg-white border border-[var(--color-border)] rounded-2xl p-4 md:p-5 shadow-sm mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
           <div className="flex items-center gap-2">
-            <Filter className="w-5 h-5 text-[var(--color-girls-accent)] shrink-0" />
+            <Filter className="w-5 h-5 shrink-0" style={{ color: '#9C69AA' }} />
             <span className="font-bold text-sm text-[var(--color-text-primary)]">Filter by Area:</span>
           </div>
           <div className="flex flex-wrap gap-2">
@@ -64,9 +70,10 @@ export default function GirlsHostelsClient() {
                 onClick={() => setAreaFilter(area)}
                 className={`px-4 py-2 text-xs font-bold rounded-xl border transition-all ${
                   areaFilter === area
-                    ? 'bg-[var(--color-girls-primary)] text-white border-[var(--color-girls-primary)] shadow-sm'
-                    : 'bg-gray-50 text-[var(--color-text-body)] border-[var(--color-border)] hover:bg-gray-100'
+                    ? 'text-white border-transparent shadow-sm'
+                    : 'bg-gray-50 text-[var(--color-text-body)] border-[var(--color-border)] hover:bg-[#f0e2f7]'
                 }`}
+                style={areaFilter === area ? { background: '#9C69AA', borderColor: '#9C69AA' } : {}}
               >
                 {area === 'All' ? 'All Areas' : `${area} Sector`}
               </button>
@@ -83,7 +90,7 @@ export default function GirlsHostelsClient() {
 
         {/* SEO Text Block */}
         <div className="bg-white border border-[var(--color-border)] rounded-3xl p-6 md:p-10 shadow-sm mb-12">
-          <h2 className="text-xl md:text-2xl font-bold text-[var(--color-text-primary)] mb-4">
+          <h2 className="text-xl md:text-2xl font-bold text-[var(--purple-900)] mb-4">
             Safe & Comfortable Girls Student Hostels in Islamabad
           </h2>
           <div className="prose prose-slate max-w-none text-sm md:text-base text-[var(--color-text-body)] space-y-4 leading-relaxed">
@@ -98,14 +105,17 @@ export default function GirlsHostelsClient() {
             </p>
           </div>
 
-          <div className="border-t border-[var(--color-border)] mt-8 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="border-t border-[var(--color-border)] mt-8 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4"
+            style={{ background: 'linear-gradient(135deg, #f0fafa, #d0f2f1)', margin: '2rem -1.5rem -1.5rem', padding: '1.5rem', borderRadius: '0 0 1.5rem 1.5rem', border: '1px solid #a1e4e2', borderTop: '1px solid #a1e4e2' }}
+          >
             <div>
               <p className="text-sm font-semibold text-[var(--color-text-primary)]">Looking for Boys Hostels instead?</p>
               <p className="text-xs text-[var(--color-text-muted)]">We have 3 branches in I-8 and I-11 sectors for male students.</p>
             </div>
             <Link
               href="/boys-hostels"
-              className="inline-flex items-center gap-1.5 px-5 py-3 border border-blue-200 text-blue-700 bg-blue-50 hover:bg-blue-100 rounded-xl text-xs font-bold transition-all min-h-[44px]"
+              className="inline-flex items-center gap-1.5 px-5 py-3 rounded-xl text-xs font-bold transition-all min-h-[44px] text-white"
+              style={{ background: 'linear-gradient(135deg, #075A6D, #1B9E99)' }}
             >
               Explore Boys Hostels
               <ArrowRight className="w-4 h-4" />

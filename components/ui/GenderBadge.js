@@ -12,11 +12,15 @@ export default function GenderBadge({ type, size = 'sm', className = '' }) {
     <span
       className={`inline-flex items-center gap-1.5 font-semibold tracking-wide rounded-full ${
         isBoys
-          ? 'bg-[var(--color-boys-light)] text-[var(--color-boys-primary)] border border-[var(--color-boys-border)]'
-          : 'bg-[var(--color-girls-light)] text-[var(--color-girls-primary)] border border-[var(--color-girls-border)]'
+          ? 'text-[var(--teal-800)]'
+          : 'text-[var(--purple-800)]'
       } ${sizeClasses[size]} ${className}`}
+      style={{
+        background: isBoys ? '#d0f2f1' : '#f0e2f7',
+        border: isBoys ? '1px solid #a1e4e2' : '1px solid #dfc0eb',
+      }}
     >
-      <span className={`w-2 h-2 rounded-full ${isBoys ? 'bg-[var(--color-boys-accent)]' : 'bg-[var(--color-girls-accent)]'}`}></span>
+      <span className={`w-2 h-2 rounded-full`} style={{ background: isBoys ? '#1B9E99' : '#9C69AA' }}></span>
       {isBoys ? 'BOYS HOSTEL' : 'GIRLS HOSTEL'}
     </span>
   );

@@ -34,19 +34,19 @@ const values = [
 ];
 
 const colorMap = {
-  blue: { bg: 'bg-blue-50', iconColor: 'text-blue-600', border: 'border-blue-100' },
+  blue: { bg: 'bg-[#f0fafa]', iconColor: 'text-[#1B9E99]', border: 'border-[#a1e4e2]' },
   green: { bg: 'bg-green-50', iconColor: 'text-green-600', border: 'border-green-100' },
-  purple: { bg: 'bg-purple-50', iconColor: 'text-purple-600', border: 'border-purple-100' },
+  purple: { bg: 'bg-[#faf5fc]', iconColor: 'text-[#9C69AA]', border: 'border-[#dfc0eb]' },
 };
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-[var(--color-bg)] py-8">
       {/* Hero */}
-      <div className="bg-gradient-to-br from-blue-50 via-white to-purple-50 py-12 md:py-16 mb-8 border-b border-[var(--color-border)]">
+      <div className="bg-gradient-to-br from-[#f0fafa] via-white to-[#faf5fc] py-12 md:py-16 mb-8 border-b border-[var(--color-border)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-blue-50 border border-blue-200 rounded-full text-blue-700 text-xs font-semibold mb-6">
+            <div className="inline-flex items-center gap-1.5 px-4 py-1.5 bg-[#d0f2f1] border border-[#a1e4e2] rounded-full text-[#075A6D] text-xs font-semibold mb-6">
               <Home className="w-3.5 h-3.5" />
               About Students Shelter
             </div>
@@ -79,10 +79,10 @@ export default function AboutPage() {
       </section>
 
       {/* Mission */}
-      <section className="py-12 md:py-16 bg-gradient-to-r from-blue-700 to-purple-700 text-white mb-12 shadow-md">
+      <section className="py-12 md:py-16 bg-gradient-to-r from-[#075A6D] to-[#783893] text-white mb-12 shadow-md">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-2xl md:text-3xl font-extrabold mb-4 font-display">Our Mission</h2>
-          <p className="text-blue-50 text-base md:text-lg leading-relaxed max-w-2xl mx-auto font-medium">
+          <p className="text-[#d0f2f1] text-base md:text-lg leading-relaxed max-w-2xl mx-auto font-medium">
             &ldquo;Providing safe, affordable, and comfortable housing for students from across Pakistan, enabling them to focus on their education without worrying about accommodation.&rdquo;
           </p>
         </div>
@@ -95,7 +95,7 @@ export default function AboutPage() {
             const Icon = stat.icon;
             return (
               <div key={stat.label} className="text-center p-4 md:p-6 bg-white border border-[var(--color-border)] rounded-2xl shadow-sm">
-                <Icon className="w-8 h-8 text-blue-600 mx-auto mb-3" />
+                <Icon className="w-8 h-8 text-[#1B9E99] mx-auto mb-3" />
                 <p className="text-2xl md:text-3xl font-extrabold text-[var(--color-text-primary)]">{stat.value}</p>
                 <p className="text-xs font-bold text-[var(--color-text-muted)] uppercase tracking-wider mt-1">{stat.label}</p>
               </div>
@@ -158,3 +158,4 @@ export default function AboutPage() {
     </div>
   );
 }
+

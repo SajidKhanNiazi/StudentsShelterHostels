@@ -57,7 +57,7 @@ export default function ApplyForm() {
             {...register('fullName', { required: 'Full name is required' })}
             type="text"
             id="apply-fullName"
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all min-h-[48px]"
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:ring-2 focus:ring-[#1B9E99] focus:border-[#1B9E99] transition-all min-h-[48px]"
             placeholder="Enter your full name"
           />
           {errors.fullName && <p className="mt-1 text-sm text-red-600">{errors.fullName.message}</p>}
@@ -72,7 +72,7 @@ export default function ApplyForm() {
             {...register('fatherName', { required: "Father's name is required" })}
             type="text"
             id="apply-fatherName"
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all min-h-[48px]"
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:ring-2 focus:ring-[#1B9E99] focus:border-[#1B9E99] transition-all min-h-[48px]"
             placeholder="Enter father's name"
           />
           {errors.fatherName && <p className="mt-1 text-sm text-red-600">{errors.fatherName.message}</p>}
@@ -89,7 +89,7 @@ export default function ApplyForm() {
             {...register('cnic', { required: 'CNIC or Student ID is required' })}
             type="text"
             id="apply-cnic"
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all min-h-[48px]"
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:ring-2 focus:ring-[#1B9E99] focus:border-[#1B9E99] transition-all min-h-[48px]"
             placeholder="XXXXX-XXXXXXX-X"
           />
           {errors.cnic && <p className="mt-1 text-sm text-red-600">{errors.cnic.message}</p>}
@@ -104,7 +104,7 @@ export default function ApplyForm() {
             {...register('university', { required: 'University/College name is required' })}
             type="text"
             id="apply-university"
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all min-h-[48px]"
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:ring-2 focus:ring-[#1B9E99] focus:border-[#1B9E99] transition-all min-h-[48px]"
             placeholder="e.g., NUST, COMSATS, QAU"
           />
           {errors.university && <p className="mt-1 text-sm text-red-600">{errors.university.message}</p>}
@@ -126,7 +126,7 @@ export default function ApplyForm() {
           })}
           type="tel"
           id="apply-phone"
-          className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all min-h-[48px]"
+          className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:ring-2 focus:ring-[#1B9E99] focus:border-[#1B9E99] transition-all min-h-[48px]"
           placeholder="0300-1234567"
         />
         {errors.phone && <p className="mt-1 text-sm text-red-600">{errors.phone.message}</p>}
@@ -141,7 +141,7 @@ export default function ApplyForm() {
           <select
             {...register('branch', { required: 'Please select a branch' })}
             id="apply-branch"
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all min-h-[48px] bg-white"
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:ring-2 focus:ring-[#1B9E99] focus:border-[#1B9E99] transition-all min-h-[48px] bg-white"
           >
             <option value="">Select Branch</option>
             <optgroup label="🔵 Boys Hostels">
@@ -166,7 +166,7 @@ export default function ApplyForm() {
           <select
             {...register('roomType', { required: 'Please select a room type' })}
             id="apply-roomType"
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all min-h-[48px] bg-white"
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:ring-2 focus:ring-[#1B9E99] focus:border-[#1B9E99] transition-all min-h-[48px] bg-white"
           >
             <option value="">Select Room Type</option>
             {ROOM_TYPES.map((room) => (
@@ -187,7 +187,7 @@ export default function ApplyForm() {
             {...register('moveInDate')}
             type="date"
             id="apply-moveIn"
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all min-h-[48px]"
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:ring-2 focus:ring-[#1B9E99] focus:border-[#1B9E99] transition-all min-h-[48px]"
           />
         </div>
 
@@ -199,7 +199,7 @@ export default function ApplyForm() {
           <select
             {...register('duration')}
             id="apply-duration"
-            className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all min-h-[48px] bg-white"
+            className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:ring-2 focus:ring-[#1B9E99] focus:border-[#1B9E99] transition-all min-h-[48px] bg-white"
           >
             <option value="">Select Duration</option>
             <option value="monthly">Monthly</option>
@@ -221,7 +221,7 @@ export default function ApplyForm() {
               {...register('emergencyName', { required: 'Emergency contact name is required' })}
               type="text"
               id="apply-emergencyName"
-              className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all min-h-[48px]"
+              className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:ring-2 focus:ring-[#1B9E99] focus:border-[#1B9E99] transition-all min-h-[48px]"
               placeholder="Parent/Guardian name"
             />
             {errors.emergencyName && <p className="mt-1 text-sm text-red-600">{errors.emergencyName.message}</p>}
@@ -235,7 +235,7 @@ export default function ApplyForm() {
               {...register('emergencyPhone', { required: 'Emergency contact phone is required' })}
               type="tel"
               id="apply-emergencyPhone"
-              className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:ring-2 focus:ring-green-500 focus:border-green-500 transition-all min-h-[48px]"
+              className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:ring-2 focus:ring-[#1B9E99] focus:border-[#1B9E99] transition-all min-h-[48px]"
               placeholder="0300-1234567"
             />
             {errors.emergencyPhone && <p className="mt-1 text-sm text-red-600">{errors.emergencyPhone.message}</p>}
@@ -255,3 +255,4 @@ export default function ApplyForm() {
     </form>
   );
 }
+

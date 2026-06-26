@@ -58,7 +58,7 @@ export default function ContactForm() {
           {...register('fullName', { required: 'Full name is required' })}
           type="text"
           id="fullName"
-          className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all min-h-[48px]"
+          className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:ring-2 focus:ring-[#1B9E99] focus:border-[#1B9E99] transition-all min-h-[48px]"
           placeholder="Enter your full name"
         />
         {errors.fullName && <p className="mt-1 text-sm text-red-600">{errors.fullName.message}</p>}
@@ -79,7 +79,7 @@ export default function ContactForm() {
           })}
           type="tel"
           id="phone"
-          className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all min-h-[48px]"
+          className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:ring-2 focus:ring-[#1B9E99] focus:border-[#1B9E99] transition-all min-h-[48px]"
           placeholder="0300-1234567"
         />
         {errors.phone && <p className="mt-1 text-sm text-red-600">{errors.phone.message}</p>}
@@ -99,7 +99,7 @@ export default function ContactForm() {
           })}
           type="email"
           id="email"
-          className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all min-h-[48px]"
+          className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:ring-2 focus:ring-[#1B9E99] focus:border-[#1B9E99] transition-all min-h-[48px]"
           placeholder="your@email.com"
         />
         {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>}
@@ -114,7 +114,7 @@ export default function ContactForm() {
           {...register('gender')}
           id="gender"
           onChange={(e) => setGender(e.target.value)}
-          className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all min-h-[48px] bg-white"
+          className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:ring-2 focus:ring-[#1B9E99] focus:border-[#1B9E99] transition-all min-h-[48px] bg-white"
         >
           <option value="">Select Gender</option>
           <option value="boys">Male</option>
@@ -130,7 +130,7 @@ export default function ContactForm() {
         <select
           {...register('hostel')}
           id="hostel"
-          className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all min-h-[48px] bg-white"
+          className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:ring-2 focus:ring-[#1B9E99] focus:border-[#1B9E99] transition-all min-h-[48px] bg-white"
         >
           <option value="">Select a hostel</option>
           {filteredHostels.map((h) => (
@@ -150,7 +150,7 @@ export default function ContactForm() {
           {...register('message')}
           id="message"
           rows={4}
-          className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-all resize-y"
+          className="w-full px-4 py-3 border border-gray-300 rounded-xl text-base focus:ring-2 focus:ring-[#1B9E99] focus:border-[#1B9E99] transition-all resize-y"
           placeholder="Any questions or specific requirements?"
         />
       </div>
@@ -159,7 +159,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-gradient-to-r from-blue-600 to-blue-700 text-white text-base font-semibold rounded-xl shadow-lg hover:from-blue-700 hover:to-blue-800 transition-all min-h-[52px] disabled:opacity-50 disabled:cursor-not-allowed"
+        className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-gradient-to-r from-[#1B9E99] to-[#075A6D] text-white text-base font-semibold rounded-xl shadow-lg hover:from-[#075A6D] hover:to-[#054255] transition-all min-h-[52px] disabled:opacity-50 disabled:cursor-not-allowed"
       >
         <Send className="w-5 h-5" />
         {isSubmitting ? 'Sending...' : 'Send Inquiry'}
@@ -167,3 +167,4 @@ export default function ContactForm() {
     </form>
   );
 }
+

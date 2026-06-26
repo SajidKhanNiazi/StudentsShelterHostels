@@ -5,7 +5,7 @@ import { ALL_HOSTELS } from '@/lib/hostels';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1c1917] text-[#f5f4f0] border-t border-[#292524]">
+    <footer className="text-[rgba(255,255,255,0.75)]" style={{ background: '#022e3a' }}>
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -18,22 +18,22 @@ export default function Footer() {
                   src="/logo.jpg" 
                   alt="Students Shelter Logo" 
                   fill
-                  className="object-contain drop-shadow-[0_0_8px_rgba(20,184,166,0.3)] group-hover:drop-shadow-[0_0_12px_rgba(20,184,166,0.8)] transition-all duration-300"
+                  className="object-contain drop-shadow-[0_0_8px_rgba(61,186,181,0.3)] group-hover:drop-shadow-[0_0_12px_rgba(61,186,181,0.8)] transition-all duration-300"
                 />
               </div>
               <div>
-                <span className="text-xl font-display uppercase tracking-widest text-white group-hover:text-[var(--color-accent)] transition-colors duration-300">Students Shelter</span>
-                <p className="text-[10px] text-[#a8a29e] tracking-[0.2em] font-medium uppercase mt-1">
+                <span className="text-xl font-display uppercase tracking-widest text-white group-hover:text-[#3DBAB5] transition-colors duration-300">Students Shelter</span>
+                <p className="text-[10px] text-[rgba(255,255,255,0.5)] tracking-[0.2em] font-medium uppercase mt-1">
                   Hostels Islamabad
                 </p>
               </div>
             </Link>
-            <p className="text-[#a8a29e] text-sm leading-relaxed mb-8 max-w-md">
+            <p className="text-[rgba(255,255,255,0.6)] text-sm leading-relaxed mb-8 max-w-md">
               Providing highly secure, elegantly furnished, and exceptionally managed student accommodations across the premium sectors of Islamabad.
             </p>
             <div className="flex flex-col gap-3 text-sm">
-              <a href="tel:03314343676" className="inline-flex items-center gap-3 text-[#d6d3cd] hover:text-[var(--color-accent)] transition-colors">
-                <div className="w-8 h-8 rounded-full border border-[#44403c] flex items-center justify-center">
+              <a href="tel:03314343676" className="inline-flex items-center gap-3 text-[#3DBAB5] hover:text-white transition-colors">
+                <div className="w-8 h-8 rounded-full border border-[rgba(255,255,255,0.2)] flex items-center justify-center">
                   <Phone className="w-3.5 h-3.5" />
                 </div>
                 <span className="font-medium tracking-wide">0331-4343676</span>
@@ -43,7 +43,7 @@ export default function Footer() {
 
           {/* Locations Column */}
           <div>
-            <h3 className="text-xs font-bold text-[var(--color-accent)] uppercase tracking-[0.15em] mb-6 font-display">
+            <h3 className="text-xs font-bold text-[#3DBAB5] uppercase tracking-[0.15em] mb-6 font-display">
               Our Locations
             </h3>
             <ul className="space-y-4">
@@ -51,9 +51,9 @@ export default function Footer() {
                 <li key={hostel.id}>
                   <Link
                     href={`/${hostel.type}-hostels/${hostel.slug}`}
-                    className="text-[#a8a29e] hover:text-white text-xs transition-colors flex items-start gap-3 group"
+                    className="text-[rgba(255,255,255,0.6)] hover:text-white text-xs transition-colors flex items-start gap-3 group"
                   >
-                    <MapPin className="w-3.5 h-3.5 mt-0.5 shrink-0 opacity-50 group-hover:opacity-100 group-hover:text-[var(--color-accent)] transition-colors" />
+                    <MapPin className="w-3.5 h-3.5 mt-0.5 shrink-0 opacity-50 group-hover:opacity-100 group-hover:text-[#3DBAB5] transition-colors" />
                     <span className="leading-relaxed">
                       {hostel.name} <br/>
                       <span className="text-[10px] opacity-70">({hostel.branchLabel || hostel.area})</span>
@@ -66,7 +66,7 @@ export default function Footer() {
 
           {/* Quick Links Column */}
           <div>
-            <h3 className="text-xs font-bold text-[var(--color-accent)] uppercase tracking-[0.15em] mb-6 font-display">
+            <h3 className="text-xs font-bold text-[#3DBAB5] uppercase tracking-[0.15em] mb-6 font-display">
               Quick Links
             </h3>
             <ul className="space-y-4">
@@ -78,7 +78,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-[#a8a29e] hover:text-white text-xs transition-colors uppercase tracking-wider"
+                    className="text-[rgba(255,255,255,0.6)] hover:text-[#3DBAB5] text-xs transition-colors uppercase tracking-wider"
                   >
                     {link.label}
                   </Link>
@@ -91,12 +91,12 @@ export default function Footer() {
       </div>
 
       {/* Copyright Footer Bar */}
-      <div className="border-t border-[#292524] bg-[#171513] py-6">
+      <div className="border-t border-[rgba(255,255,255,0.1)] py-6" style={{ background: '#011f27' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-          <p className="text-[#78716c] text-[11px] tracking-wide uppercase">
+          <p className="text-[rgba(255,255,255,0.5)] text-[11px] tracking-wide uppercase">
             © {new Date().getFullYear()} Students Shelter Hostels. All rights reserved.
           </p>
-          <p className="text-[#78716c] text-[11px] tracking-wide uppercase">
+          <p className="text-[rgba(255,255,255,0.5)] text-[11px] tracking-wide uppercase">
             Islamabad, Pakistan
           </p>
         </div>

@@ -15,9 +15,16 @@ export default function LocationFilter({ activeType, onTypeChange, activeArea, o
             onClick={() => onTypeChange(tab.value)}
             className={`flex-1 sm:flex-none px-4 py-2.5 rounded-lg text-sm font-semibold transition-all min-h-[44px] ${
               activeType === tab.value
-                ? 'bg-white text-gray-900 shadow-sm'
+                ? 'text-white shadow-sm'
                 : 'text-gray-600 hover:text-gray-900'
             }`}
+            style={activeType === tab.value ? {
+              background: tab.value === 'boys'
+                ? '#1B9E99'
+                : tab.value === 'girls'
+                  ? '#9C69AA'
+                  : 'linear-gradient(135deg, #1B9E99, #9C69AA)',
+            } : {}}
           >
             {tab.label}
           </button>
@@ -28,7 +35,8 @@ export default function LocationFilter({ activeType, onTypeChange, activeArea, o
       <select
         value={activeArea}
         onChange={(e) => onAreaChange(e.target.value)}
-        className="px-4 py-2.5 border border-gray-200 rounded-xl text-sm font-medium text-gray-700 bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 min-h-[44px] w-full sm:w-auto"
+        className="px-4 py-2.5 border border-gray-200 rounded-xl text-sm font-medium text-gray-700 bg-white min-h-[44px] w-full sm:w-auto"
+        style={{ '--tw-ring-color': '#1B9E99' }}
         id="area-filter"
       >
         <option value="all">All Areas</option>

@@ -5,9 +5,9 @@ import { useState, useEffect, useRef } from 'react';
 const HOSTEL_DATA = {
   boys: {
     label: 'Boys Hostels',
-    color: '#1a3a6b',
-    accent: '#2563eb',
-    light: '#eff6ff',
+    color: '#075A6D',
+    accent: '#1B9E99',
+    light: '#f0fafa',
     branches: [
       {
         id: 'faizabad',
@@ -49,9 +49,9 @@ const HOSTEL_DATA = {
   },
   girls: {
     label: 'Girls Hostels',
-    color: '#5b21b6',
-    accent: '#7c3aed',
-    light: '#f5f3ff',
+    color: '#3d1a4d',
+    accent: '#783893',
+    light: '#faf5fc',
     branches: [
       {
         id: 'i83b2',
@@ -493,8 +493,8 @@ export default function ChatBot() {
           width: 60px;
           height: 60px;
           border-radius: 50%;
-          background: linear-gradient(135deg, #1a3a6b, #2563eb);
-          box-shadow: 0 4px 20px rgba(37, 99, 235, 0.4);
+          background: linear-gradient(135deg, #075A6D 0%, #1B9E99 50%, #783893 100%);
+          box-shadow: 0 4px 20px rgba(27, 158, 153, 0.4);
           display: flex;
           align-items: center;
           justify-content: center;
@@ -578,7 +578,7 @@ export default function ChatBot() {
           to { opacity: 1; transform: scale(1); }
         }
         .cb-header {
-          background: linear-gradient(135deg, #1a3a6b, #2563eb);
+          background: linear-gradient(135deg, #075A6D 0%, #1B9E99 50%, #783893 100%);
           padding: 14px 16px;
           display: flex;
           align-items: center;
@@ -610,7 +610,7 @@ export default function ChatBot() {
           width: 10px;
           height: 10px;
           background: #22c55e;
-          border: 2px solid #2563eb;
+          border: 2px solid #1B9E99;
           border-radius: 50%;
         }
         .cb-name {
@@ -694,7 +694,7 @@ export default function ChatBot() {
           box-shadow: 0 1px 2px rgba(0,0,0,0.05);
         }
         .cb-user {
-          background: linear-gradient(135deg, #1a3a6b, #2563eb);
+          background: linear-gradient(135deg, #075A6D 0%, #1B9E99 50%, #783893 100%);
           border-radius: 18px 18px 4px 18px;
           padding: 10px 14px;
           color: white;
@@ -718,20 +718,20 @@ export default function ChatBot() {
           transform: translateY(8px);
         }
         .cb-quick-reply.blue {
-          border: 1.5px solid #2563eb;
-          color: #1a3a6b;
+          border: 1.5px solid #1B9E99;
+          color: #075A6D;
         }
         .cb-quick-reply.blue:hover {
-          background: #2563eb;
+          background: #1B9E99;
           color: white;
           transform: translateY(-1px);
         }
         .cb-quick-reply.purple {
-          border: 1.5px solid #7c3aed;
-          color: #5b21b6;
+          border: 1.5px solid #783893;
+          color: #3d1a4d;
         }
         .cb-quick-reply.purple:hover {
-          background: #7c3aed;
+          background: #783893;
           color: white;
           transform: translateY(-1px);
         }
@@ -764,16 +764,16 @@ export default function ChatBot() {
           padding: 14px;
           margin-top: 8px;
         }
-        .cb-branch-card.border-blue { border-left: 4px solid #2563eb; }
-        .cb-branch-card.border-purple { border-left: 4px solid #7c3aed; }
+        .cb-branch-card.border-blue { border-left: 4px solid #1B9E99; }
+        .cb-branch-card.border-purple { border-left: 4px solid #783893; }
         .cb-gender-label {
           font-size: 10px;
           font-weight: 700;
           letter-spacing: 0.05em;
           margin-bottom: 4px;
         }
-        .cb-gender-label.text-blue { color: #2563eb; }
-        .cb-gender-label.text-purple { color: #7c3aed; }
+        .cb-gender-label.text-blue { color: #1B9E99; }
+        .cb-gender-label.text-purple { color: #783893; }
         .cb-branch-name {
           font-size: 14px;
           font-weight: 700;
@@ -795,8 +795,8 @@ export default function ChatBot() {
           color: #475569;
         }
         .cb-security-note {
-          background: #f5f3ff;
-          color: #5b21b6;
+          background: #faf5fc;
+          color: #3d1a4d;
           padding: 6px 8px;
           border-radius: 6px;
           font-size: 11px;
@@ -822,7 +822,7 @@ export default function ChatBot() {
         }
         .cb-map-link {
           display: inline-block;
-          color: #2563eb;
+          color: #1B9E99;
           font-size: 12px;
           font-weight: 500;
           text-decoration: none;
@@ -837,7 +837,7 @@ export default function ChatBot() {
         }
         .cb-map-btn {
           display: inline-block;
-          background: #2563eb;
+          background: #1B9E99;
           color: white;
           padding: 8px 12px;
           border-radius: 6px;
@@ -864,7 +864,7 @@ export default function ChatBot() {
           box-shadow: 0 4px 12px rgba(0,0,0,0.05);
         }
         .cb-handoff-card.whatsapp { background: #dcfce7; border: 1.5px solid #bbf7d0; }
-        .cb-handoff-card.call { background: #dbeafe; border: 1.5px solid #bfdbfe; }
+        .cb-handoff-card.call { background: #d0f2f1; border: 1.5px solid #a1e4e2; }
         .cb-handoff-card.map { background: #fef9c3; border: 1.5px solid #fef08a; }
         .cb-card-icon {
           width: 40px;
@@ -876,7 +876,7 @@ export default function ChatBot() {
           flex-shrink: 0;
         }
         .cb-card-icon.wa { background: #16a34a; }
-        .cb-card-icon.phone { background: #eff6ff; color: #2563eb; }
+        .cb-card-icon.phone { background: #eff6ff; color: #1B9E99; }
         .cb-card-icon.map-icon { background: #fffbeb; color: #d97706; }
         .cb-card-title {
           font-size: 13.5px;
@@ -918,3 +918,4 @@ export default function ChatBot() {
     </>
   );
 }
+

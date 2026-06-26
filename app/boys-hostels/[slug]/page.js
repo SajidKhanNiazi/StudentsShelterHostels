@@ -56,8 +56,8 @@ const roomIcons = {
 };
 
 const roomColors = {
-  'single': 'border-blue-200 bg-blue-50/50 text-blue-700 font-bold',
-  'double': 'border-purple-200 bg-purple-50/50 text-purple-700 font-bold',
+  'single': 'border-blue-200 bg-[#f0fafa]/50 text-[#075A6D] font-bold',
+  'double': 'border-[#dfc0eb] bg-purple-50/50 text-[#783893] font-bold',
   'triple': 'border-green-200 bg-green-50/50 text-green-700 font-bold',
 };
 
@@ -110,7 +110,7 @@ export default async function BoysBranchPage({ params }) {
         {/* Room Types Available */}
         <div className="bg-white border border-[var(--color-border)] rounded-2xl p-5 md:p-6 shadow-sm mb-8">
           <h3 className="text-lg md:text-xl font-bold text-[var(--color-text-primary)] mb-4 flex items-center gap-2">
-            <Users className="w-5 h-5 text-blue-600 shrink-0" />
+            <Users className="w-5 h-5 text-[#1B9E99] shrink-0" />
             Room Types Available
           </h3>
           <div className="grid sm:grid-cols-3 gap-4 mb-6">
@@ -123,11 +123,11 @@ export default async function BoysBranchPage({ params }) {
               return (
                 <div key={room.id} className="border border-[var(--color-border)] rounded-xl p-4 bg-gray-50/50 flex flex-col justify-between">
                   <div>
-                    <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center text-blue-700 mb-3">
+                    <div className="w-10 h-10 bg-[#d0f2f1] rounded-lg flex items-center justify-center text-[#075A6D] mb-3">
                       <Icon className="w-5 h-5" />
                     </div>
                     <h4 className="text-sm font-bold text-[var(--color-text-primary)] mb-0.5">{room.name}</h4>
-                    <span className="inline-block text-[10px] bg-blue-50 text-blue-700 border border-blue-100 font-semibold px-2 py-0.5 rounded-full mb-3">
+                    <span className="inline-block text-[10px] bg-[#f0fafa] text-[#075A6D] border border-[#a1e4e2] font-semibold px-2 py-0.5 rounded-full mb-3">
                       {room.occupancy}
                     </span>
                   </div>
@@ -137,9 +137,9 @@ export default async function BoysBranchPage({ params }) {
             })}
           </div>
 
-          <div className="bg-blue-50 border border-[var(--color-boys-border)] rounded-xl p-4">
+          <div className="bg-[#f0fafa] border border-[var(--color-boys-border)] rounded-xl p-4">
             <h4 className="text-xs font-bold text-[var(--color-boys-primary)] uppercase tracking-wider mb-2 flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-blue-600" />
+              <ShieldCheck className="w-4 h-4 text-[#1B9E99]" />
               Standard Room Inclusions
             </h4>
             <ul className="grid sm:grid-cols-2 gap-2 text-xs text-[var(--color-text-body)]">
@@ -163,14 +163,14 @@ export default async function BoysBranchPage({ params }) {
         <BranchOtherLocations currentHostel={hostel} allHostels={BOYS_HOSTELS} />
 
         {/* Cross link to girls */}
-        <div className="bg-gradient-to-r from-purple-50 to-indigo-50 border border-purple-100 rounded-2xl p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="bg-gradient-to-r from-[#faf5fc] to-[#f0e2f7] border border-[#dfc0eb] rounded-2xl p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
             <h4 className="font-bold text-[var(--color-text-primary)] text-sm mb-0.5">Looking for Girls Hostels in Islamabad?</h4>
             <p className="text-xs text-[var(--color-text-muted)]">We offer premium separate girls branches with active female staff management.</p>
           </div>
           <Link
             href="/girls-hostels"
-            className="inline-flex items-center gap-1.5 px-4 py-2 border border-purple-200 bg-white hover:bg-purple-50 text-purple-700 text-xs font-bold rounded-xl transition-all min-h-[40px] shrink-0"
+            className="inline-flex items-center gap-1.5 px-4 py-2 border border-[#dfc0eb] bg-white hover:bg-[#faf5fc] text-[#783893] text-xs font-bold rounded-xl transition-all min-h-[40px] shrink-0"
           >
             See Girls Branches
             <ArrowRight className="w-3.5 h-3.5" />
@@ -183,3 +183,4 @@ export default async function BoysBranchPage({ params }) {
     </div>
   );
 }
+

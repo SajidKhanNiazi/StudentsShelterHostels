@@ -11,7 +11,7 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen bg-[var(--color-bg)] py-8">
       {/* Hero */}
-      <div className="bg-gradient-to-br from-blue-50 via-white to-purple-50 py-12 md:py-16 mb-8 border-b border-[var(--color-border)]">
+      <div className="bg-gradient-to-br from-[#f0fafa] via-white to-[#faf5fc] py-12 md:py-16 mb-8 border-b border-[var(--color-border)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-[var(--color-text-primary)] mb-3">
             Contact Us
@@ -55,21 +55,21 @@ export default function ContactPage() {
             {/* Phone Numbers */}
             <div className="bg-white rounded-2xl border border-[var(--color-border)] p-6 shadow-sm">
               <h3 className="text-lg font-bold text-[var(--color-text-primary)] mb-4 flex items-center gap-2">
-                <Phone className="w-5 h-5 text-blue-600 shrink-0" />
+                <Phone className="w-5 h-5 text-[#1B9E99] shrink-0" />
                 Phone Numbers
               </h3>
               <div className="space-y-4">
                 <div>
-                  <p className="text-xs font-bold text-purple-600 uppercase tracking-wider mb-1">🟣 Girls Hostel</p>
+                  <p className="text-xs font-bold text-[#9C69AA] uppercase tracking-wider mb-1">🟣 Girls Hostel</p>
                   <a
                     href="tel:03314343676"
-                    className="text-base font-extrabold text-[var(--color-text-primary)] hover:text-purple-700 transition-colors"
+                    className="text-base font-extrabold text-[var(--color-text-primary)] hover:text-[#783893] transition-colors"
                   >
                     0331-4343676
                   </a>
                 </div>
                 <div>
-                  <p className="text-xs font-bold text-blue-600 uppercase tracking-wider mb-1">🔵 Boys Hostel</p>
+                  <p className="text-xs font-bold text-[#1B9E99] uppercase tracking-wider mb-1">🔵 Boys Hostel</p>
                   <p className="text-xs text-[var(--color-text-muted)] font-medium">Contact via WhatsApp</p>
                 </div>
               </div>
@@ -78,14 +78,14 @@ export default function ContactPage() {
             {/* All Branch Addresses */}
             <div className="bg-white rounded-2xl border border-[var(--color-border)] p-6 shadow-sm">
               <h3 className="text-lg font-bold text-[var(--color-text-primary)] mb-4 flex items-center gap-2">
-                <MapPin className="w-5 h-5 text-blue-600 shrink-0" />
+                <MapPin className="w-5 h-5 text-[#1B9E99] shrink-0" />
                 Our Branches
               </h3>
               <div className="space-y-4">
                 {ALL_HOSTELS.map((hostel) => (
                   <div key={hostel.id} className="pb-4 border-b border-gray-100 last:border-0 last:pb-0">
                     <p className={`text-xs font-bold uppercase tracking-wider mb-1.5 ${
-                      hostel.type === 'boys' ? 'text-blue-600' : 'text-purple-600'
+                      hostel.type === 'boys' ? 'text-[#1B9E99]' : 'text-[#9C69AA]'
                     }`}>
                       {hostel.type === 'boys' ? '🔵' : '🟣'} {hostel.branchLabel || hostel.area}
                     </p>
@@ -93,7 +93,7 @@ export default function ContactPage() {
                       href={hostel.googleMapsUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-xs md:text-sm text-[var(--color-text-body)] hover:text-blue-600 transition-colors leading-relaxed block"
+                      className="text-xs md:text-sm text-[var(--color-text-body)] hover:text-[#1B9E99] transition-colors leading-relaxed block"
                     >
                       {hostel.fullAddress}
                     </a>
@@ -107,3 +107,4 @@ export default function ContactPage() {
     </div>
   );
 }
+
