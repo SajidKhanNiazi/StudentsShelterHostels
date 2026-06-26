@@ -110,25 +110,62 @@ export default function HomePage() {
           {/* INTERACTIVE HOSTEL TYPES UI */}
           <InteractiveHostelTypes />
 
-          {/* PRICE */}
-          <div className="mb-16 bg-[var(--color-primary)] text-white p-8 rounded-2xl shadow-md">
-            <h2 className="text-2xl font-display font-bold text-[var(--color-accent)] mb-6">
-              Monthly Hostel Rent in Islamabad
-            </h2>
-            <ul className="space-y-4 text-lg">
-              <li className="flex items-center gap-3">
-                <span className="w-3 h-3 bg-[var(--color-accent)] rounded-full"></span>
-                <strong>Budget Hostels</strong> – Shared rooms
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="w-3 h-3 bg-[var(--color-accent)] rounded-full"></span>
-                <strong>Mid-range Hostels</strong> – Furnished + meals
-              </li>
-              <li className="flex items-center gap-3">
-                <span className="w-3 h-3 bg-[var(--color-accent)] rounded-full"></span>
-                <strong>Premium Hostels</strong> – Private rooms
-              </li>
-            </ul>
+          {/* PRICE / RENT TIERS */}
+          <div className="mb-24 mt-12 text-center max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-display font-bold text-[var(--color-text-primary)] mb-4">
+                Monthly Hostel Rent in Islamabad
+              </h2>
+              <div className="w-24 h-1.5 bg-gradient-to-r from-[var(--color-accent)] to-[var(--color-primary)] mx-auto rounded-full"></div>
+              <p className="mt-4 text-lg text-gray-600 font-medium">Choose the accommodation tier that best fits your lifestyle and budget.</p>
+            </div>
+            
+            <div className="grid md:grid-cols-3 gap-6 lg:gap-8 items-center">
+              {/* Budget */}
+              <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden group">
+                <div className="absolute top-0 left-0 w-full h-1.5 bg-gray-200 group-hover:bg-[var(--color-primary)] transition-colors"></div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2 font-display">Budget Hostels</h3>
+                <div className="text-[var(--color-text-muted)] text-sm mb-6 font-medium">Affordable living for students</div>
+                <div className="text-[var(--color-primary)] font-extrabold text-2xl mb-8 flex items-center justify-center bg-gray-50 py-3 rounded-lg border border-gray-100">
+                   Shared Rooms
+                </div>
+                <ul className="space-y-4 text-sm text-gray-700 text-left font-semibold">
+                  <li className="flex items-center gap-3"><div className="w-2 h-2 rounded-full bg-gray-400 shrink-0"></div> Double / Triple sharing</li>
+                  <li className="flex items-center gap-3"><div className="w-2 h-2 rounded-full bg-gray-400 shrink-0"></div> Essential basic amenities</li>
+                  <li className="flex items-center gap-3"><div className="w-2 h-2 rounded-full bg-gray-400 shrink-0"></div> Highly affordable monthly rent</li>
+                </ul>
+              </div>
+              
+              {/* Mid Range */}
+              <div className="bg-[var(--color-primary)] rounded-2xl p-8 shadow-2xl hover:-translate-y-2 transition-all duration-300 relative overflow-hidden ring-4 ring-[var(--color-accent)]/30 ring-offset-4 scale-100 md:scale-105 z-10">
+                <div className="absolute top-0 right-0 bg-[var(--color-accent)] text-white text-[10px] uppercase font-black tracking-widest px-4 py-1.5 rounded-bl-xl shadow-sm">POPULAR</div>
+                <h3 className="text-2xl font-bold !text-white mb-2 font-display">Mid-range Hostels</h3>
+                <div className="text-gray-300 text-sm mb-6 font-medium">Best value for comfort</div>
+                <div className="!text-[var(--color-accent)] font-extrabold text-2xl mb-8 flex items-center justify-center bg-white/5 py-3 rounded-lg border border-white/10">
+                   Furnished + Meals
+                </div>
+                <ul className="space-y-4 text-sm text-gray-100 text-left font-semibold">
+                  <li className="flex items-center gap-3"><div className="w-2 h-2 rounded-full bg-[var(--color-accent)] shrink-0"></div> 3 quality meals included</li>
+                  <li className="flex items-center gap-3"><div className="w-2 h-2 rounded-full bg-[var(--color-accent)] shrink-0"></div> Laundry & High-speed WiFi</li>
+                  <li className="flex items-center gap-3"><div className="w-2 h-2 rounded-full bg-[var(--color-accent)] shrink-0"></div> Excellent value for money</li>
+                </ul>
+              </div>
+              
+              {/* Premium */}
+              <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2 relative overflow-hidden group">
+                <div className="absolute top-0 left-0 w-full h-1.5 bg-gray-200 group-hover:bg-[var(--color-accent)] transition-colors"></div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-2 font-display">Premium Hostels</h3>
+                <div className="text-[var(--color-text-muted)] text-sm mb-6 font-medium">Maximum privacy & comfort</div>
+                <div className="text-[var(--color-accent)] font-extrabold text-2xl mb-8 flex items-center justify-center bg-[var(--color-accent)]/10 py-3 rounded-lg border border-[var(--color-accent)]/20">
+                   Private Rooms
+                </div>
+                <ul className="space-y-4 text-sm text-gray-700 text-left font-semibold">
+                  <li className="flex items-center gap-3"><div className="w-2 h-2 rounded-full bg-gray-400 shrink-0"></div> Single / Private occupancy</li>
+                  <li className="flex items-center gap-3"><div className="w-2 h-2 rounded-full bg-gray-400 shrink-0"></div> AC / Heating on demand</li>
+                  <li className="flex items-center gap-3"><div className="w-2 h-2 rounded-full bg-gray-400 shrink-0"></div> Exclusive premium services</li>
+                </ul>
+              </div>
+            </div>
           </div>
 
           {/* FAQ */}
