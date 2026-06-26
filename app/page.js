@@ -70,7 +70,7 @@ export default function HomePage() {
             </h2>
             <div className="w-16 h-1 bg-[var(--color-accent)] mx-auto mb-6 rounded-full"></div>
             <p className="text-[var(--color-text-muted)] text-base max-w-2xl mx-auto">
-              We cover prime locations including I-8, I-9, I-10, I-11, H-8, H-9, and H-13 (near universities).
+              We cover prime locations including I-8, I-9, I-10, I-11, H-8, H-9, H-10, H-11, Faizabad, and H-13 (near universities).
             </p>
           </div>
 
