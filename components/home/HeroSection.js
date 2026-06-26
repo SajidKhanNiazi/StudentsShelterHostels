@@ -25,9 +25,8 @@ export default function HeroSection() {
             in Islamabad
           </h1>
 
-          <p className="text-lg sm:text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Separate Boys & Girls accommodation across 5 locations in I-8 and I-11.
-            Near metro stations for easy commute.
+          <p className="text-lg sm:text-xl md:text-2xl font-semibold text-gray-900 mb-10 max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
+            Looking for the best hostels in Islamabad for students, job holders, or working professionals? Explore verified accommodation including girls and boys hostels with full facilities and safe living options.
           </p>
 
           {/* CTA Buttons */}

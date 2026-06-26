@@ -35,38 +35,27 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? 'backdrop-blur-md shadow-sm border-b border-[var(--teal-200)]'
-          : ''
+      className={`sticky top-0 z-50 transition-all duration-300 bg-white border-b border-gray-100 ${
+        scrolled ? 'shadow-sm' : ''
       }`}
-      style={{
-        background: scrolled
-          ? 'rgba(240,250,250,0.95)'
-          : 'linear-gradient(135deg, #075A6D 0%, #1B9E99 45%, #783893 100%)'
-      }}
     >
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20 md:h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group" onClick={() => setIsOpen(false)}>
-            <div className="relative w-12 h-12 flex-shrink-0 transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(61,186,181,0.6)]">
+            <div className="relative w-12 h-12 flex-shrink-0 transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_8px_rgba(61,186,181,0.6)] rounded-full overflow-hidden">
               <Image 
                 src="/logo.jpg" 
                 alt="Students Shelter Logo" 
                 fill
-                className="object-contain"
+                className="object-contain mix-blend-multiply"
               />
             </div>
             <div className="flex flex-col">
-              <span className={`text-lg font-semibold tracking-wide font-display uppercase transition-colors duration-300 ${
-                scrolled ? 'text-[var(--teal-800)] group-hover:text-[var(--teal-500)]' : 'text-white group-hover:text-[var(--teal-400)]'
-              }`}>
+              <span className="text-xl md:text-2xl font-bold tracking-wide font-display uppercase transition-colors duration-300 text-[var(--teal-800)] group-hover:text-[var(--teal-500)]">
                 Students Shelter
               </span>
-              <span className={`text-[10px] tracking-[0.2em] uppercase leading-none mt-1 hidden sm:block font-medium ${
-                scrolled ? 'text-[var(--color-text-muted)]' : 'text-white/70'
-              }`}>
+              <span className="text-[10px] tracking-[0.2em] uppercase leading-none mt-1 hidden sm:block font-bold text-[var(--color-text-muted)]">
                 Hostels Islamabad
               </span>
             </div>
@@ -78,11 +67,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`text-sm font-medium transition-colors uppercase tracking-wider ${
-                  scrolled
-                    ? 'text-[var(--color-text-body)] hover:text-[var(--teal-500)]'
-                    : 'text-white/85 hover:text-white'
-                }`}
+                className="text-sm font-semibold transition-colors uppercase tracking-wider text-[var(--color-text-body)] hover:text-[var(--teal-500)]"
               >
                 {link.label}
               </Link>
@@ -92,11 +77,7 @@ export default function Navbar() {
           {/* Mobile Hamburger */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={`md:hidden p-2 rounded transition-colors ${
-              scrolled
-                ? 'text-[var(--color-text-primary)] hover:bg-[var(--teal-100)]'
-                : 'text-white hover:bg-white/10'
-            }`}
+            className="md:hidden p-2 rounded transition-colors text-[var(--color-text-primary)] hover:bg-[var(--teal-50)]"
             aria-label="Toggle menu"
             id="mobile-menu-button"
           >
