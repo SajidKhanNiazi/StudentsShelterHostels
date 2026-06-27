@@ -3,6 +3,7 @@ import Breadcrumb from '@/components/seo/Breadcrumb';
 import LocalBusinessSchema from '@/components/seo/LocalBusinessSchema';
 import BranchHero from '@/components/branch/BranchHero';
 import BranchMap from '@/components/branch/BranchMap';
+import RoomsSection from '@/components/branch/RoomsSection';
 import BranchAmenities from '@/components/branch/BranchAmenities';
 import BranchDirections from '@/components/branch/BranchDirections';
 import BranchEnquiryForm from '@/components/branch/BranchEnquiryForm';
@@ -95,6 +96,9 @@ export default async function GirlsBranchPage({ params }) {
         {/* Map Embed */}
         <BranchMap hostel={hostel} />
 
+        {/* Rooms & Pricing section */}
+        <RoomsSection branchSlug={hostel.slug} />
+
         {/* Amenities grid */}
         <BranchAmenities amenities={hostel.amenities} type="girls" />
 
@@ -126,51 +130,7 @@ export default async function GirlsBranchPage({ params }) {
           </div>
         </div>
 
-        {/* Room Types Available */}
-        <div className="bg-white border border-[var(--color-border)] rounded-2xl p-5 md:p-6 shadow-sm mb-8">
-          <h3 className="text-lg md:text-xl font-bold text-[var(--color-text-primary)] mb-4 flex items-center gap-2">
-            <Users className="w-5 h-5 text-[#9C69AA] shrink-0" />
-            Room Types Available
-          </h3>
-          <div className="grid sm:grid-cols-3 gap-4 mb-6">
-            {[
-              { id: 'single', name: 'Single Room', occupancy: '1 Person', priceNote: 'Contact for pricing' },
-              { id: 'double', name: 'Double Sharing', occupancy: '2 Persons', priceNote: 'Contact for pricing' },
-              { id: 'triple', name: 'Triple Sharing', occupancy: '3 Persons', priceNote: 'Contact for pricing' },
-            ].map((room) => {
-              const Icon = roomIcons[room.id];
-              return (
-                <div key={room.id} className="border border-[var(--color-border)] rounded-xl p-4 bg-gray-50/50 flex flex-col justify-between">
-                  <div>
-                    <div className="w-10 h-10 bg-[#f0e2f7] rounded-lg flex items-center justify-center text-[#783893] mb-3">
-                      <Icon className="w-5 h-5" />
-                    </div>
-                    <h4 className="text-sm font-bold text-[var(--color-text-primary)] mb-0.5">{room.name}</h4>
-                    <span className="inline-block text-[10px] bg-[#faf5fc] text-[#783893] border border-[#dfc0eb] font-semibold px-2 py-0.5 rounded-full mb-3">
-                      {room.occupancy}
-                    </span>
-                  </div>
-                  <p className="text-xs text-[var(--color-text-muted)] font-medium pt-2 border-t border-gray-100">{room.priceNote}</p>
-                </div>
-              );
-            })}
-          </div>
 
-          <div className="bg-[#faf5fc] border border-[var(--color-girls-border)] rounded-xl p-4">
-            <h4 className="text-xs font-bold text-[var(--color-girls-primary)] uppercase tracking-wider mb-2 flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-[#9C69AA]" />
-              Standard Room Inclusions
-            </h4>
-            <ul className="grid sm:grid-cols-2 gap-2 text-xs text-[var(--color-text-body)]">
-              {roomInclusions.map((inc) => (
-                <li key={inc} className="flex items-center gap-1.5">
-                  <Check className="w-3.5 h-3.5 text-green-600 shrink-0" />
-                  <span>{inc}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
 
         {/* Enquiry form */}
         <BranchEnquiryForm branchName={hostel.branchLabel || hostel.area} hostelType="girls" />
