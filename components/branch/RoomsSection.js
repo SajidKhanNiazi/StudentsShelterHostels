@@ -173,6 +173,28 @@ export default function RoomsSection({ branchSlug }) {
             />
           ))}
         </div>
+
+        {/* WhatsApp Catalogue Callout */}
+        <div className="mt-12 bg-gradient-to-r from-emerald-50 to-green-50/30 border border-emerald-500/20 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
+          <div className="flex items-center gap-4 text-center md:text-left flex-col md:flex-row">
+            <div className="w-12 h-12 rounded-xl bg-emerald-500 flex items-center justify-center text-white shadow-md shadow-emerald-500/20 shrink-0">
+              <MessageCircle className="w-6 h-6 fill-current" />
+            </div>
+            <div>
+              <h4 className="text-lg font-extrabold text-slate-900">Want to see more options?</h4>
+              <p className="text-sm text-slate-500 mt-0.5 font-medium">View our complete, detailed room catalog on WhatsApp for complete details and live availability.</p>
+            </div>
+          </div>
+          <a
+            href="https://wa.me/c/923314343676"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full md:w-auto px-6 py-3.5 rounded-xl text-sm font-extrabold text-white bg-emerald-500 hover:bg-emerald-600 transition-all hover:shadow-lg hover:shadow-emerald-500/20 active:scale-95 text-center shrink-0 flex items-center justify-center gap-2"
+          >
+            <span>View WhatsApp Catalogue</span>
+            <span className="text-emerald-100 font-normal">→</span>
+          </a>
+        </div>
         
       </div>
     </section>
