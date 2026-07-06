@@ -5,7 +5,7 @@ import { ALL_HOSTELS } from '@/lib/hostels';
 
 export default function Footer() {
   return (
-    <footer className="text-[rgba(255,255,255,0.75)]" style={{ background: '#022e3a' }}>
+    <footer className="text-gray-200" style={{ background: '#022e3a' }}>
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -23,12 +23,12 @@ export default function Footer() {
               </div>
               <div>
                 <span className="text-xl font-display uppercase tracking-widest text-white group-hover:text-[#3DBAB5] transition-colors duration-300">Students Shelter</span>
-                <p className="text-[10px] text-[rgba(255,255,255,0.5)] tracking-[0.2em] font-medium uppercase mt-1">
+                <p className="text-[10px] text-gray-300 tracking-[0.2em] font-medium uppercase mt-1">
                   Hostels Islamabad
                 </p>
               </div>
             </Link>
-            <p className="text-[rgba(255,255,255,0.6)] text-sm leading-relaxed mb-8 max-w-md">
+            <p className="text-gray-300 text-sm leading-relaxed mb-8 max-w-md">
               Providing highly secure, elegantly furnished, and exceptionally managed student accommodations across the premium sectors of Islamabad.
             </p>
             <div className="flex flex-col gap-3 text-sm">
@@ -51,7 +51,7 @@ export default function Footer() {
                 <li key={hostel.id}>
                   <Link
                     href={`/${hostel.type}-hostels/${hostel.slug}`}
-                    className="text-[rgba(255,255,255,0.6)] hover:text-white text-xs transition-colors flex items-start gap-3 group"
+                    className="text-gray-300 hover:text-white text-xs transition-colors flex items-start gap-3 group"
                   >
                     <MapPin className="w-3.5 h-3.5 mt-0.5 shrink-0 opacity-50 group-hover:opacity-100 group-hover:text-[#3DBAB5] transition-colors" />
                     <span className="leading-relaxed">
@@ -78,7 +78,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-[rgba(255,255,255,0.6)] hover:text-[#3DBAB5] text-xs transition-colors uppercase tracking-wider"
+                    className="text-gray-300 hover:text-[#3DBAB5] text-xs transition-colors uppercase tracking-wider"
                   >
                     {link.label}
                   </Link>
@@ -93,10 +93,10 @@ export default function Footer() {
       {/* Copyright Footer Bar */}
       <div className="border-t border-[rgba(255,255,255,0.1)] py-6" style={{ background: '#011f27' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-          <p className="text-[rgba(255,255,255,0.5)] text-[11px] tracking-wide uppercase">
+          <p className="text-gray-400 text-[11px] tracking-wide uppercase">
             © {new Date().getFullYear()} Students Shelter Hostels. All rights reserved.
           </p>
-          <p className="text-[rgba(255,255,255,0.5)] text-[11px] tracking-wide uppercase">
+          <p className="text-gray-400 text-[11px] tracking-wide uppercase">
             Islamabad, Pakistan
           </p>
         </div>

@@ -118,7 +118,7 @@ export default function HomePage() {
               className="w-full md:w-auto px-6 py-3.5 rounded-xl text-sm font-extrabold text-white bg-emerald-500 hover:bg-emerald-600 transition-all hover:shadow-lg hover:shadow-emerald-500/20 active:scale-95 text-center shrink-0 flex items-center justify-center gap-2"
             >
               <span>View WhatsApp Catalogue</span>
-              <span className="text-emerald-100 font-normal">→</span>
+              <span className="text-white font-normal">→</span>
             </a>
           </div>
 

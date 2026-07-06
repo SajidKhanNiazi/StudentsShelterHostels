@@ -318,12 +318,12 @@ export default function ChatBot() {
       {showTooltip && !isOpen && (
         <div className="cb-tooltip">
           👋 Is a hostel available? Ask me!
-          <button onClick={() => setShowTooltip(false)} className="cb-tooltip-close">×</button>
+          <button onClick={() => setShowTooltip(false)} className="cb-tooltip-close" aria-label="Close tooltip">×</button>
         </div>
       )}
 
       {!isOpen && (
-        <button className="cb-fab" onClick={() => { setIsOpen(true); setShowTooltip(false); }}>
+        <button className="cb-fab" onClick={() => { setIsOpen(true); setShowTooltip(false); }} aria-label="Open chat">
           <div className="cb-badge"></div>
           <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
@@ -342,10 +342,10 @@ export default function ChatBot() {
               </div>
             </div>
             <div className="cb-header-actions">
-              <button onClick={(e) => { e.stopPropagation(); setIsMinimized(!isMinimized); }}>
+              <button onClick={(e) => { e.stopPropagation(); setIsMinimized(!isMinimized); }} aria-label={isMinimized ? "Maximize chat window" : "Minimize chat window"}>
                 {isMinimized ? '↑' : '−'}
               </button>
-              <button onClick={(e) => { e.stopPropagation(); setIsOpen(false); }}>×</button>
+              <button onClick={(e) => { e.stopPropagation(); setIsOpen(false); }} aria-label="Close chat window">×</button>
             </div>
           </div>
 
@@ -515,12 +515,21 @@ export default function ChatBot() {
           background: #ef4444;
           border: 2px solid white;
           border-radius: 50%;
-          animation: pulse 2s infinite;
         }
-        @keyframes pulse {
-          0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.7); }
-          70% { box-shadow: 0 0 0 6px rgba(239, 68, 68, 0); }
-          100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); }
+        .cb-badge::after {
+          content: '';
+          position: absolute;
+          top: -2px;
+          left: -2px;
+          width: 14px;
+          height: 14px;
+          border-radius: 50%;
+          border: 2px solid #ef4444;
+          animation: pulse-composited 2s infinite;
+        }
+        @keyframes pulse-composited {
+          0% { transform: scale(1); opacity: 1; }
+          100% { transform: scale(2.2); opacity: 0; }
         }
         .cb-tooltip {
           position: fixed;
@@ -782,7 +791,7 @@ export default function ChatBot() {
         }
         .cb-branch-address {
           font-size: 12px;
-          color: #64748b;
+          color: #475569;
           margin-bottom: 4px;
         }
         .cb-branch-landmark {
@@ -885,13 +894,13 @@ export default function ChatBot() {
         }
         .cb-card-sub {
           font-size: 11px;
-          color: #64748b;
+          color: #475569;
           margin-top: 2px;
         }
         .cb-restart-btn {
           background: none;
           border: none;
-          color: #64748b;
+          color: #475569;
           font-size: 12px;
           text-align: center;
           padding: 8px;
