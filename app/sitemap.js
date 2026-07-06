@@ -68,5 +68,17 @@ export default function sitemap() {
       priority: 0.7,
       lastModified: new Date(),
     },
+    {
+      url: `${SITE_URL}/testimonials`,
+      changeFrequency: 'monthly',
+      priority: 0.75,
+      lastModified: new Date(),
+    },
+    {
+      url: `${SITE_URL}/sitemap-page`,
+      changeFrequency: 'monthly',
+      priority: 0.5,
+      lastModified: new Date(),
+    },
   ]
 }

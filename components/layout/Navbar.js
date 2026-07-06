@@ -10,6 +10,7 @@ const navLinks = [
   { href: '/#locations', label: 'Locations', icon: MapPin },
   { href: '/rooms', label: 'Rooms', icon: BedDouble },
   { href: '/gallery', label: 'Gallery', icon: Camera },
+  { href: '/testimonials', label: 'Reviews', icon: FileText },
   { href: '/about', label: 'About', icon: Info },
   { href: '/contact', label: 'Contact', icon: Mail },
 ];

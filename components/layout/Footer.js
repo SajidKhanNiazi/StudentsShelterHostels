@@ -74,6 +74,8 @@ export default function Footer() {
                 { href: '/rooms', label: 'Rooms & Pricing' },
                 { href: '/about', label: 'About Us' },
                 { href: '/contact', label: 'Contact & Inquiry' },
+                { href: '/testimonials', label: 'Student Reviews' },
+                { href: '/privacy-policy', label: 'Privacy Policy' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
