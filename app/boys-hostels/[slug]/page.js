@@ -14,7 +14,7 @@ import Link from 'next/link';
 import { ArrowRight, User, Users, Users2, ShieldCheck, Check } from 'lucide-react';
 import { notFound } from 'next/navigation';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://studentsshelterhostels.vercel.app';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://studentsshelterhostel.pk';
 
 export async function generateStaticParams() {
   return BOYS_HOSTELS.map((hostel) => ({

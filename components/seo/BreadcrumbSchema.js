@@ -6,7 +6,7 @@ export default function BreadcrumbSchema({ items }) {
       "@type": "ListItem",
       "position": index + 1,
       "name": item.label,
-      ...(item.href ? { "item": `https://studentsshelter.com${item.href}` } : {})
+      ...(item.href ? { "item": `https://studentsshelterhostel.pk${item.href}` } : {})
     }))
   };
 

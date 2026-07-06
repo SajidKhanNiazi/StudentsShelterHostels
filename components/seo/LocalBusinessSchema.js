@@ -1,5 +1,5 @@
 export default function LocalBusinessSchema({ hostel }) {
-  const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://studentsshelterhostels.vercel.app';
+  const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://studentsshelterhostel.pk';
   const schemaData = hostel.localBusinessSchema || {};
 
   const schema = {

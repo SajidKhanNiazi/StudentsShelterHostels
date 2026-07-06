@@ -6,6 +6,6 @@ export default function robots() {
         allow: '/',
       },
     ],
-    sitemap: 'https://studentsshelter.com/sitemap.xml',
+    sitemap: 'https://studentsshelterhostel.pk/sitemap.xml',
   };
 }

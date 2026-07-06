@@ -33,7 +33,7 @@ export default function BranchSchema({ hostel }) {
     "parentOrganization": {
       "@type": "Organization",
       "name": "Students Shelter Hostels",
-      "url": "https://www.studentsshelter.com"
+      "url": "https://studentsshelterhostel.pk"
     }
   };
 

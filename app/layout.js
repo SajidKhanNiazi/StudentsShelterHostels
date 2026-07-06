@@ -31,7 +31,7 @@ export const metadata = {
   openGraph: {
     title: "Students Shelter Hostels Islamabad",
     description: "Safe, affordable student hostels in Islamabad.",
-    url: "https://www.studentsshelter.com",
+    url: "https://studentsshelterhostel.pk",
     siteName: "Students Shelter Hostels",
     type: "website",
     locale: "en_PK",
@@ -40,7 +40,7 @@ export const metadata = {
     index: true,
     follow: true,
   },
-  metadataBase: new URL("https://www.studentsshelter.com"),
+  metadataBase: new URL("https://studentsshelterhostel.pk"),
 };
 
 export default function RootLayout({ children }) {
