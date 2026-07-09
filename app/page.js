@@ -16,8 +16,258 @@ import {
 } from 'lucide-react';
 
 export default function HomePage() {
+  const jsonLd = {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"WebSite",
+        "@id":"https://studentsshelterhostel.pk/#website",
+        "url":"https://studentsshelterhostel.pk/",
+        "name":"Students Shelter Hostels Islamabad",
+        "description":"Affordable student hostels in Islamabad with separate boys and girls accommodation across verified locations near universities and Faizabad Metro Station.",
+        "inLanguage":"en-PK",
+        "publisher":{
+          "@id":"https://studentsshelterhostel.pk/#business"
+        },
+        "potentialAction":{
+          "@type":"SearchAction",
+          "target":"https://studentsshelterhostel.pk/?s={search_term_string}",
+          "query-input":"required name=search_term_string"
+        }
+      },
+      {
+        "@type":"WebPage",
+        "@id":"https://studentsshelterhostel.pk/#webpage",
+        "url":"https://studentsshelterhostel.pk/",
+        "name":"Students Shelter Hostels Islamabad | Boys & Girls Hostels",
+        "description":"Affordable student hostels in Islamabad with separate boys and girls accommodation. 5 locations in I-8 and I-11. Near Faizabad Metro Station.",
+        "isPartOf":{
+          "@id":"https://studentsshelterhostel.pk/#website"
+        },
+        "mainEntity":{
+          "@id":"https://studentsshelterhostel.pk/#business"
+        },
+        "about":{
+          "@id":"https://studentsshelterhostel.pk/#service"
+        }
+      },
+      {
+        "@type":"Hostel",
+        "@id":"https://studentsshelterhostel.pk/#business",
+        "name":"Students Shelter Hostels Islamabad",
+        "url":"https://studentsshelterhostel.pk/",
+        "logo":"https://studentsshelterhostel.pk/logo.png",
+        "image":"https://studentsshelterhostel.pk/og-image.jpg",
+        "description":"Students Shelter provides verified boys and girls hostels in Islamabad with furnished rooms, quality meals, WiFi, CCTV security, laundry and comfortable accommodation for students and working professionals near major universities.",
+        "telephone":"+92-331-4343676",
+        "priceRange":"$$",
+        "sameAs":[
+          "https://www.facebook.com/p/Students-Shelter-Group-of-Hostels-Islamabad-100063967473592/",
+          "https://www.instagram.com/students_shelter_hostel/"
+        ],
+        "address":{
+          "@type":"PostalAddress",
+          "addressLocality":"Islamabad",
+          "addressRegion":"Islamabad Capital Territory",
+          "postalCode":"44000",
+          "addressCountry":"PK"
+        },
+        "geo":{
+          "@type":"GeoCoordinates",
+          "latitude":33.7380,
+          "longitude":73.0845
+        },
+        "openingHoursSpecification":[
+          {
+            "@type":"OpeningHoursSpecification",
+            "dayOfWeek":[
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday",
+              "Saturday",
+              "Sunday"
+            ],
+            "opens":"00:00",
+            "closes":"23:59"
+          }
+        ],
+        "contactPoint":[
+          {
+            "@type":"ContactPoint",
+            "telephone":"+92-331-4343676",
+            "contactType":"Customer Service",
+            "areaServed":"Islamabad",
+            "availableLanguage":[
+              "English",
+              "Urdu"
+            ]
+          }
+        ],
+        "areaServed":[
+          {
+            "@type":"AdministrativeArea",
+            "name":"Islamabad Capital Territory"
+          },
+          {
+            "@type":"Place",
+            "name":"I-8"
+          },
+          {
+            "@type":"Place",
+            "name":"I-8/3"
+          },
+          {
+            "@type":"Place",
+            "name":"I-8/4"
+          },
+          {
+            "@type":"Place",
+            "name":"I-11"
+          },
+          {
+            "@type":"Place",
+            "name":"I-11/1"
+          },
+          {
+            "@type":"Place",
+            "name":"Faizabad"
+          },
+          {
+            "@type":"Place",
+            "name":"H-8"
+          },
+          {
+            "@type":"Place",
+            "name":"H-9"
+          },
+          {
+            "@type":"Place",
+            "name":"H-10"
+          },
+          {
+            "@type":"Place",
+            "name":"H-11"
+          },
+          {
+            "@type":"Place",
+            "name":"H-13"
+          }
+        ],
+        "serviceType":[
+          "Student Hostel",
+          "Boys Hostel",
+          "Girls Hostel",
+          "Student Accommodation",
+          "Private Rooms",
+          "Shared Accommodation",
+          "Monthly Hostel Rental",
+          "Co-living Space"
+        ],
+        "knowsAbout":[
+          "Hostels in Islamabad",
+          "Girls Hostel in Islamabad",
+          "Boys Hostel in Islamabad",
+          "Student Housing",
+          "University Accommodation",
+          "Secure Hostel",
+          "Furnished Rooms",
+          "Shared Living"
+        ],
+        "hasOfferCatalog":{
+          "@type":"OfferCatalog",
+          "name":"Student Accommodation Services",
+          "itemListElement":[
+            {
+              "@type":"Offer",
+              "itemOffered":{
+                "@type":"Service",
+                "name":"Student Hostel"
+              }
+            },
+            {
+              "@type":"Offer",
+              "itemOffered":{
+                "@type":"Service",
+                "name":"Girls Hostel"
+              }
+            },
+            {
+              "@type":"Offer",
+              "itemOffered":{
+                "@type":"Service",
+                "name":"Boys Hostel"
+              }
+            },
+            {
+              "@type":"Offer",
+              "itemOffered":{
+                "@type":"Service",
+                "name":"Private Rooms"
+              }
+            },
+            {
+              "@type":"Offer",
+              "itemOffered":{
+                "@type":"Service",
+                "name":"Shared Rooms"
+              }
+            },
+            {
+              "@type":"Offer",
+              "itemOffered":{
+                "@type":"Service",
+                "name":"Monthly Hostel Accommodation"
+              }
+            },
+            {
+              "@type":"Offer",
+              "itemOffered":{
+                "@type":"Service",
+                "name":"Student Housing"
+              }
+            },
+            {
+              "@type":"Offer",
+              "itemOffered":{
+                "@type":"Service",
+                "name":"Co-living Accommodation"
+              }
+            }
+          ]
+        },
+        "mainEntityOfPage":{
+          "@id":"https://studentsshelterhostel.pk/#webpage"
+        }
+      },
+      {
+        "@type":"Service",
+        "@id":"https://studentsshelterhostel.pk/#service",
+        "name":"Student Hostel Accommodation in Islamabad",
+        "description":"Verified boys and girls hostels in Islamabad offering furnished rooms, meals, WiFi, CCTV security, laundry services and comfortable accommodation near major universities.",
+        "serviceType":"Student Hostel Accommodation",
+        "provider":{
+          "@id":"https://studentsshelterhostel.pk/#business"
+        },
+        "areaServed":{
+          "@type":"AdministrativeArea",
+          "name":"Islamabad Capital Territory"
+        },
+        "offers":{
+          "@type":"Offer",
+          "priceCurrency":"PKR"
+        }
+      }
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Elegant Hero Section */}
       <section className="relative overflow-hidden pt-24 pb-20 lg:pt-36 lg:pb-28 text-white min-h-[90vh] flex flex-col justify-center group"
         style={{ borderBottom: '8px solid #1B9E99' }}
