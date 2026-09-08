@@ -14,10 +14,11 @@ export default function TestimonialsClient({ testimonials }) {
   const branches = [
     { name: 'All Branches', slug: 'all' },
     { name: 'I-8/4 Faizabad Branch', slug: 'i-8-4-faizabad' },
-    { name: 'I-11/1 Branch', slug: 'i-11-1' },
+    { name: 'I-11/1 Boys Branch', slug: 'i-11-1' },
     { name: 'I-8/4 Main Branch', slug: 'i-8-4-main' },
     { name: 'I-8/3 Branch 1', slug: 'i-8-3-branch-1' },
     { name: 'I-8/3 Branch 2', slug: 'i-8-3-branch-2' },
+    { name: 'I-11/1 Girls Branch', slug: 'i-11-1-girls' },
   ];
 
   const filtered = testimonials.filter((t) => {

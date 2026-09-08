@@ -97,7 +97,7 @@ export default async function GirlsBranchPage({ params }) {
         <BranchMap hostel={hostel} />
 
         {/* Rooms & Pricing section */}
-        <RoomsSection branchSlug={hostel.slug} />
+        <RoomsSection branchSlug={hostel.id || hostel.slug} />
 
         {/* Amenities grid */}
         <BranchAmenities amenities={hostel.amenities} type="girls" />

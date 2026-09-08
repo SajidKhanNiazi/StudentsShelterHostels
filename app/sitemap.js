@@ -51,6 +51,12 @@ export default function sitemap() {
       lastModified: new Date(),
     },
     {
+      url: `${SITE_URL}/girls-hostels/i-11-1`,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+      lastModified: new Date(),
+    },
+    {
       url: `${SITE_URL}/rooms`,
       changeFrequency: 'monthly',
       priority: 0.7,

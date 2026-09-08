@@ -79,6 +79,19 @@ const HOSTEL_DATA = {
         security: 'Female staff only. Secure entry gate. CCTV cameras.',
         directions: 'House 129, Street 60 in I-8/3 sector. Call 0331-4343676 for directions.',
       },
+      {
+        id: 'i111g',
+        name: 'I-11/1 Branch',
+        address: 'House 369, Street 11, I-11/1, Islamabad',
+        landmark: 'Near Metro Cash & Carry',
+        phone: '0331-4343676',
+        whatsapp: '923314343676',
+        mapUrl: 'https://maps.app.goo.gl/xVx2w6AfPUq2CaVu9',
+        rooms: ['Single Cubicle', 'Single with Kitchen', '2 Bed CW', '3 Bed AW', '3 Bed CW', '4 Bed AW', '4 Bed CW'],
+        amenities: ['Nestle Mineral Water', 'Two Meals Daily', 'Fiber WiFi', 'Daily Cleaning', 'Geyser', 'CCTV', 'Parking'],
+        security: 'Female staff only. Secure entry gate. CCTV camera surveillance. 24/7 security guard.',
+        directions: 'House 369, Street 11 in I-11/1 sector near Metro Cash & Carry. Call 0331-4343676 for directions.',
+      },
     ]
   }
 };

@@ -45,9 +45,10 @@ const SITEMAP_DATA = [
     icon: '🟣',
     color: 'purple',
     pages: [
-      { name: 'All Girls Hostels', url: '/girls-hostels', desc: '2 girls hostel branches in I-8/3' },
+      { name: 'All Girls Hostels', url: '/girls-hostels', desc: '3 girls hostel branches in Islamabad' },
       { name: 'I-8/3 Branch 2 (Main)', url: '/girls-hostels/i-8-3-branch-2', desc: 'Main girls branch — 0331-4343676' },
       { name: 'I-8/3 Branch 1', url: '/girls-hostels/i-8-3-branch-1', desc: 'House 129, Street 60, I-8/3' },
+      { name: 'I-11/1 Branch', url: '/girls-hostels/i-11-1', desc: 'House 369, Street 11, I-11/1' },
     ]
   },
   {

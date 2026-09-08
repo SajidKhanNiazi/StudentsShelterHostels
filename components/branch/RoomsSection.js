@@ -94,7 +94,7 @@ function RoomCardColumn({ room, gender, branchSlug }) {
 }
 
 export default function RoomsSection({ branchSlug }) {
-  const data = ROOMS_DATA[branchSlug]
+  const data = ROOMS_DATA[branchSlug] || ROOMS_DATA[`${branchSlug}-girls`]
   const [activeFilter, setActiveFilter] = useState('all')
 
   if (!data) return null
